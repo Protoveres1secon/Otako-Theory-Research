@@ -1,2 +1,1 @@
-# Otako-Theory-Research
-An experimental research project exploring the Otako Theory, a proposed spatial-domain model describing movement constraints between nested physical spaces. This repository contains definitions, symbols, axioms, mathematical notation, proofs, and ongoing experiments. Community feedback is welcome.
+Otako Theory Research is an independent experimental project exploring a proposed spatial model that describes constrained motion between nested physical spaces. This repository contains definitions, symbols, axioms, experimental observations, mathematical formulations, and ongoing verification. Community feedback and independent testing are welcome.
