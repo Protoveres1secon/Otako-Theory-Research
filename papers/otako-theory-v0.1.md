@@ -127,4 +127,4 @@ Editing rights: Reserved by the author.
 
 Anyone wishing to contribute is welcome to reply; however, please do not delete or disrupt this "O-ta-ko" version.
 
--Link : "              "
+-Link : "  https://github.com/Protoveres1secon/Otako-Theory-Research/blob/main/papers/02-distribution-symmetry-stability.md            "
