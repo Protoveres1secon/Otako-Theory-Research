@@ -16,9 +16,7 @@ n(d)⇒n∗a→b
 
 The trajectory from point a to point b is considered valid only when:
 
-g
-
-=0
+g0
 
 When gravity is absent:
 
