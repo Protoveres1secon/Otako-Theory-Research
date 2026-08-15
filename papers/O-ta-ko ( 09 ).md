@@ -1,4 +1,4 @@
-O-Ta-Ko Theory — Axiom 9:   The 1-2-1 Distribution Law
+O-Ta-Ko Theory — Axiom 10:   The 1-2-1 Distribution Law
 
 Axiom 9 — The 1-2-1 Distribution Law
 
@@ -22,7 +22,7 @@ Even when the O-Ta structure is stretched, compressed, or otherwise scaled, the 
 
 Therefore, deformation may change the numerical values or scale of the configuration, but it does not by itself eliminate the 1-2-1 Law.
 
-Axiom 10: Recursion
+Axiom 11: Recursion
 
 If the head shape is a new 10-Ta, then the entire set of rules is applied again.
 
@@ -39,7 +39,7 @@ Head shape→3×3→reapply the 1-2-1 Law
 
 O-Ta-Ko Theory — Axiom 11: Deformation
 
-Axiom 11: Deformation
+Axiom 12: Deformation
 
 If an O-Ta is only stretched or deformed, then the 1-2-1 Law does not change.
 
