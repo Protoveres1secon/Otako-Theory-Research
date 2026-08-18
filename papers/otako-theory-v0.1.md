@@ -94,16 +94,7 @@ If entity n belongs to Binh Domain, then its valid trajectory is constrained fro
 
 Part VI. Fundamental Theorem
 
-n(d)⇒n
-
-∈
-
-/
-
-⇒
-	​
-
-c
+n(d)⇒n∉⇒c
 
 Definition:
 
