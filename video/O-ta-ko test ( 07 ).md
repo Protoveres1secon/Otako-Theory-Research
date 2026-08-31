@@ -1,3 +1,3 @@
 # 🎥 Project Video Gallery
 
-* 🎞️ [Otako1]([[O-ta-ko(04 test)](https://youtu.be/Av-AzIeDJS0))]
+* 🎞️ [Otako test]([[O-ta-ko(07 test)](https://youtu.be/Av-AzIeDJS0))]
