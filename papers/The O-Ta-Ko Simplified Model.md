@@ -1,68 +1,91 @@
-O-Ta-Ko Simplified Model
+# O-Ta-Ko Simplified Model
 
-The O-Ta-Ko Simplified Model is a geometric simplification of the original O-Ta-Ko structure. It is designed to make the system easier to construct, visualize, measure, and calculate.
+The **O-Ta-Ko Simplified Model** is a simplified geometric representation of the original O-Ta-Ko structure.
 
-The simplified model consists of two main geometric components:
+The purpose of this model is to make the structure easier to construct, visualize, measure, and study using basic geometric methods.
 
-Chum: a square block.
-Bình: a hollow circular cylinder located at the center of the Chum.
-1. 2D Model
+The simplified model is intended as a **supporting model** and does not replace the original O-Ta-Ko structure.
 
-The area of the Chum is:
+## 1. Basic Structure
 
-$$ S_{\text{Chum}}=a^2 $$
+The simplified model consists of two main parts:
 
-The area of the Bình is:
+- **Chum** — represented by a square block.
+- **Bình** — represented by a hollow circular cylindrical structure located in the central part of the Chum.
 
-$$ S_{\text{Bình}}=\pi r^2 $$
+This simplified representation replaces part of the more complex geometry of the original O-Ta-Ko structure with basic geometric shapes.
 
-Therefore, the remaining area is:
+## 2. Standard Geometric Formulas
 
-$$ S_{\text{remaining}}=a^2-\pi r^2 $$
-2. 3D Model
+The simplified model can be examined using standard formulas from elementary geometry.
 
-The volume of the Chum is:
+For example, the area of a square with side length `a` is:
 
-$$ V_{\text{Chum}}=a^2h $$
+$$
+S = a^2
+$$
 
-The volume of the Bình is:
+The circumference of a circle with radius `r` is:
 
-$$ V_{\text{Bình}}=\pi r^2h $$
+$$
+C = 2\pi r
+$$
 
-Therefore, the remaining volume is:
+The area of a circle with radius `r` is:
 
-$$ V_{\text{remaining}}=a^2h-\pi r^2h $$
+$$
+S = \pi r^2
+$$
 
-or:
+The volume of a cylinder with radius `r` and height `h` is:
 
-$$ V_{\text{remaining}}=h(a^2-\pi r^2) $$
-3. Advantages
+$$
+V = \pi r^2 h
+$$
 
-The simplified model provides several practical advantages:
+These are **standard geometric formulas**. They are used only as examples for calculations involving the simplified model and are not newly derived formulas of O-Ta-Ko.
 
-It is easier to construct.
-Its dimensions are easier to measure.
-Its area and volume can be calculated using standard geometric formulas.
-It can be used as a practical model for experiments and demonstrations of the O-Ta-Ko system.
-4. Limitation
+## 3. Why Use a Simplified Model?
 
-The simplified model does not completely preserve the geometry of the original O-Ta-Ko model.
+The simplified model makes the structure easier to work with because basic geometric shapes can be constructed and measured more easily.
 
-In the original O-Ta-Ko structure, the connection between Bình and Chum contains a smooth and continuous curved transition, in which the end of the Bình curves back smoothly.
+It can be useful for:
 
-In the simplified model, the square Chum and cylindrical Bình are represented using simpler geometric forms. As a result, the transition may become a 90-degree corner rather than a continuous curve.
+- simple geometric calculations;
+- physical model construction;
+- visualization;
+- measurements and experiments;
+- explaining the general structure of O-Ta-Ko.
 
-This means that the simplified model is a supporting geometric model, not a replacement for the original O-Ta-Ko structure.
+The simplified model therefore provides a practical way to study some geometric aspects of O-Ta-Ko without reproducing the full complexity of the original structure.
 
-5. Comparison
-Feature	Original O-Ta-Ko Model	Simplified Model
-Geometry	Curved and continuous	Square + cylindrical
-Transition	Smooth and continuous	May form a 90° corner
-Calculation	More complex	Simpler
-Construction	More difficult	Easier
-Purpose	Main model	Supporting model
-Conclusion
+## 4. Main Limitation
 
-The O-Ta-Ko Simplified Model provides an easier way to represent and calculate the geometric structure of O-Ta-Ko. However, its geometric simplification introduces a limitation at the connection between Bình and Chum.
+The main limitation of the simplified model is its treatment of the connection between **Chum** and **Bình**.
 
-Therefore, the simplified model should be regarded as a supporting model for calculation, visualization, and experimentation, while the original O-Ta-Ko geometry remains the primary model.
+In the original O-Ta-Ko structure, this connection contains a **smooth and continuous curved transition**.
+
+The simplified model replaces this curved transition with simpler geometric forms. Because of this simplification, the connection may contain a **sharp transition, such as a 90° corner**, instead of the smooth curvature of the original structure.
+
+This means that the simplified model is easier to construct and calculate, but it does not completely preserve the geometric continuity of the original O-Ta-Ko structure.
+
+## 5. Original Model vs. Simplified Model
+
+| Feature | Original O-Ta-Ko Model | Simplified Model |
+|---|---|---|
+| Geometry | More complex curved structure | Basic geometric shapes |
+| Connection | Smooth and continuous | Simplified transition |
+| Calculation | More difficult | Easier |
+| Construction | More difficult | Easier |
+| Measurement | More complex | Easier |
+| Role | Primary model | Supporting model |
+
+## Conclusion
+
+The **O-Ta-Ko Simplified Model** provides a simpler geometric representation of the original O-Ta-Ko structure.
+
+It allows standard elementary-geometry formulas to be used for basic calculations and makes physical construction, measurement, and visualization easier.
+
+However, the simplification also removes part of the smooth curved transition present in the original structure.
+
+Therefore, the simplified model should be considered a **supporting model for O-Ta-Ko**, while the **original O-Ta-Ko structure remains the primary model**.
