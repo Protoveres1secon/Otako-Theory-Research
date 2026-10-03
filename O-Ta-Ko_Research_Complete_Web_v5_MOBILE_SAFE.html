@@ -1,0 +1,2563 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>O-Ta-Ko Research — Complete Research Portal v5 Mobile Safe</title>
+<style>
+:root{--bg:#0b1020;--panel:#121a2f;--panel2:#17213b;--text:#edf2ff;--muted:#a9b4cf;--line:#2b3859;--accent:#7dd3fc;--accent2:#c4b5fd;--good:#86efac;}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#080d19 0,#0b1020 100%);color:var(--text);line-height:1.55}
+a{color:var(--accent)} .wrap{max-width:1400px;margin:auto;padding:24px} header{padding:28px 0 18px} h1{font-size:clamp(32px,5vw,58px);margin:0 0 8px} h2{font-size:28px;margin:28px 0 14px} h3{margin:0;font-size:19px} .lead{color:var(--muted);max-width:950px}
+.hero,.panel,.doc-card,.video-card,.image-card{background:rgba(18,26,47,.92);border:1px solid var(--line);border-radius:18px;box-shadow:0 14px 40px rgba(0,0,0,.22)}
+.hero{padding:22px} .meta-grid,.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px} .meta{padding:14px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025)} .meta strong{display:block;color:#fff} .muted{color:var(--muted)}
+.nav{position:sticky;top:0;z-index:10;background:rgba(8,13,25,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)} .navin{max-width:1400px;margin:auto;padding:10px 24px;display:flex;gap:8px;overflow:auto} .nav a{white-space:nowrap;text-decoration:none;padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:#dbeafe;font-size:13px}
+.section{margin-top:28px} .panel{padding:20px} .doc-card{padding:18px;margin:14px 0} .doc-head{display:flex;gap:10px;align-items:center;flex-wrap:wrap} .badge{font-size:11px;letter-spacing:.08em;padding:4px 8px;border-radius:999px;background:rgba(125,211,252,.12);border:1px solid rgba(125,211,252,.35);color:var(--accent)} .source-path{font-size:12px;color:var(--muted);margin:8px 0 14px;word-break:break-all}
+pre{white-space:pre-wrap;word-break:break-word;margin:0;padding:16px;border-radius:12px;background:#0a0f1d;border:1px solid #202b46;color:#dce6ff;font:13px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;max-height:600px;overflow:auto}
+.video-card{padding:12px} .video-card h3{padding:4px 4px 10px} .video-card iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:12px;background:#000} .video-src{font-size:12px;color:var(--muted);padding:8px 4px 0}
+.image-card{padding:12px} .image-card img{width:100%;height:280px;object-fit:contain;background:#070b15;border-radius:12px} .image-card strong{display:block;padding:10px 4px 2px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px} @media(max-width:850px){.two{grid-template-columns:1fr}}
+.kbd{font-family:ui-monospace,monospace;background:#0a0f1d;border:1px solid var(--line);padding:2px 6px;border-radius:6px} .note{border-left:3px solid var(--accent2);padding:12px 14px;background:rgba(196,181,253,.08);border-radius:8px;color:#ddd7ff}
+footer{margin:40px 0 10px;padding:18px 0;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+button{font:inherit;cursor:pointer;border:1px solid var(--line);color:#fff;background:#18233f;padding:9px 12px;border-radius:10px;touch-action:manipulation;-webkit-tap-highlight-color:transparent} button:hover{border-color:var(--accent)} a, input, select, textarea{touch-action:manipulation}
+
+/* O-Ta-Ko Research Web v2 — readability + lazy media + virtualized calculator */
+body{background:radial-gradient(1200px 600px at 10% -10%,rgba(125,211,252,.09),transparent 60%),radial-gradient(1100px 500px at 90% 0%,rgba(196,181,253,.08),transparent 60%),linear-gradient(180deg,#070b15 0,#0b1020 100%)}
+.nav{box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.section{scroll-margin-top:78px}.section-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:12px}.section-kicker{color:var(--muted);margin:4px 0 0;max-width:980px}.status-chip{font-size:12px;padding:7px 10px;border-radius:999px;background:rgba(134,239,172,.1);border:1px solid rgba(134,239,172,.28);color:var(--good);white-space:nowrap}
+.doc-body{white-space:normal;word-break:break-word;margin:0;padding:4px 2px;color:#e9efff;font:16px/1.75 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}.doc-body p{margin:0 0 12px}.doc-body h4,.doc-body h5,.doc-body h6{margin:20px 0 8px;color:#fff}.doc-body h4{font-size:19px}.doc-body h5{font-size:17px}.doc-body h6{font-size:15px}.doc-body .mathline{font:600 18px/1.5 Georgia,serif;padding:10px 12px;margin:10px 0;border-left:3px solid var(--accent);background:rgba(125,211,252,.06);border-radius:8px;white-space:pre-wrap}.doc-body ul{margin:6px 0 14px 22px}.doc-body li{margin:4px 0}.doc-body .source-rule{height:1px;background:var(--line);margin:18px 0}.doc-body .doc-table{border-collapse:collapse;width:100%;margin:12px 0}.doc-body .doc-table th,.doc-body .doc-table td{border:1px solid var(--line);padding:8px 10px;text-align:left}.doc-body .doc-table th{background:rgba(125,211,252,.08)}.doc-body code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:rgba(255,255,255,.06);padding:2px 5px;border-radius:5px}
+.doc-card{overflow:hidden}.doc-card details{margin-top:14px}.source-index pre{font:13px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#0a0f1d;border:1px solid #202b46;border-radius:12px;max-height:520px;overflow:auto;padding:16px;white-space:pre-wrap}
+.source-index .doc-card{background:rgba(9,14,27,.9)}
+.formula-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:16px 0}.formula-card{padding:16px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025)}.formula-card .eq{font:700 25px/1.35 Georgia,serif;color:#fff;text-align:center;padding:12px 4px}.formula-card .caption{font-size:12px;color:var(--muted);text-align:center}
+.video-grid{grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}.lazy-video{position:relative;overflow:hidden}.video-thumb{height:170px;border-radius:12px;background:linear-gradient(135deg,#18233f,#0b1020);display:flex;align-items:center;justify-content:center;position:relative;cursor:pointer;border:1px solid #243150}.video-thumb:focus,.video-thumb:hover{border-color:var(--accent);outline:none}.video-thumb .play{font-size:42px;filter:drop-shadow(0 4px 12px rgba(0,0,0,.5))}.video-thumb .vnum{position:absolute;left:10px;top:10px;font-size:11px;padding:4px 7px;border-radius:999px;background:rgba(0,0,0,.38);border:1px solid rgba(255,255,255,.16)}.lazy-video.loaded .video-thumb{display:none}.lazy-video iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:12px;background:#000}
+.calc-shell{background:#f6f8fb;color:#14171d;border:1px solid #cfd5df;border-radius:18px;padding:18px;box-shadow:0 12px 34px rgba(0,0,0,.18)}.calc-toolbar{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}.formula-main{display:flex;align-items:center;gap:10px;font:700 25px/1.1 Georgia,serif}.frac{display:inline-flex;flex-direction:column;align-items:center;line-height:1}.frac .top{padding:0 10px 5px;border-bottom:2px solid #111}.frac .bottom{padding:5px 10px 0}.calc-tabs{display:flex;gap:8px}.calc-tab{background:#18233f;color:#fff;border-color:#18233f}.calc-tab.active{background:#111827}.calc-info{margin-top:16px}.mapping-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}.map-card{background:#fff;border:1px solid #dde2ea;border-radius:12px;padding:12px}.map-card b{display:block;margin-bottom:6px}.mapping-table{border-collapse:collapse;width:100%;margin-top:12px;background:#fff;border:1px solid #dde2ea}.mapping-table th,.mapping-table td{padding:8px 10px;border-bottom:1px solid #edf0f5;text-align:center;font-size:13px}.mapping-table th{background:#f1f4f8}.mapping-table .remove{color:#8a5a00;font-weight:700}.calc-rule-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin:16px 0}.calc-rule-grid>div{background:#fff;border:1px solid #dde2ea;border-radius:12px;padding:12px;display:flex;gap:10px}.calc-rule-grid b{min-width:24px;height:24px;border-radius:8px;background:#111827;color:#fff;display:inline-flex;align-items:center;justify-content:center}.calc-actions{display:flex;justify-content:space-between;gap:14px;align-items:flex-end;flex-wrap:wrap}.rowline{display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap}.rowline label{font-size:12px;color:#566070}.rowline input{background:#fff;color:#14171d;border:1px solid #c7ceda}.rowline button{background:#111827;color:#fff}.rowline .ghost{background:#fff;color:#111827}.audit-progress{margin:14px 0;background:#fff;border:1px solid #dde2ea;border-radius:12px;padding:12px}.progress-top{display:flex;justify-content:space-between;gap:12px;font-size:13px}.progress-track{height:10px;background:#e7ebf1;border-radius:999px;overflow:hidden;margin-top:8px}.progress-track>div{height:100%;width:0;background:#111827;transition:width .08s linear}.calc-summary{margin-top:16px;display:grid;gap:10px}.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.summary-card{background:#fff;border:1px solid #dde2ea;border-radius:12px;padding:12px}.summary-card strong{display:block;font-size:18px}.calc-detail{margin-top:14px}.case-head{background:#fff;border:1px solid #dde2ea;border-radius:12px;padding:12px}.branch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}.branch-card{background:#fff;border:1px solid #dde2ea;border-radius:12px;padding:12px}.branch-card h4{margin:0 0 8px}.trace{font:13px/1.65 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre-wrap;word-break:break-word;color:#202633}.state-pill{display:inline-block;padding:4px 8px;border-radius:999px;background:#e8f5e9;color:#256029;font-weight:700}.case-table-wrap{margin-top:16px;background:#fff;border:1px solid #dde2ea;border-radius:12px;overflow:hidden}.table-head{display:flex;justify-content:space-between;gap:8px;padding:12px 14px;border-bottom:1px solid #e7ebf1}.case-scroll{max-height:520px;overflow:auto}.case-table{border-collapse:collapse;width:100%}.case-table th,.case-table td{padding:8px 10px;border-bottom:1px solid #edf0f5;font-size:12px;text-align:left;white-space:nowrap}.case-table th{position:sticky;top:0;background:#f1f4f8;z-index:1}.case-table .active-row{background:#eef3f8}.case-table button{background:#fff;color:#111827;padding:5px 8px;font-size:12px}.calc-footnote{margin-top:12px;color:#5c6574;font-size:12px}.loading-note{padding:12px;border-radius:12px;background:#fff;border:1px dashed #c7ceda;color:#5c6574}
+@media(max-width:800px){.branch-grid{grid-template-columns:1fr}.calc-actions{align-items:stretch}.rowline{width:100%}.rowline label{flex:1;min-width:180px}.rowline button{min-height:42px}.formula-main{font-size:21px}.doc-body{font-size:14px}}
+.symbol-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.symbol-card{border:1px solid #d9e1ee;background:#fff;color:#182033;border-radius:16px;padding:14px}.symbol-card .symbol-head{font-weight:800;margin-bottom:8px;color:#111827}.symbol-table{color:#182033}.symbol-table th,.symbol-table td{color:#182033;border-color:#d9e1ee}.symbol-table th{background:#f3f6fb;font-weight:700}.symbol-table td{background:#fff}.symbol-table td:first-child,.symbol-table th:first-child{width:24%;white-space:nowrap}.symbol-table td:first-child{font-family:Georgia,serif;font-size:18px;font-weight:600;color:#111827}@media(max-width:800px){.symbol-grid{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<div class="nav"><div class="navin">
+<a href="#overview">Tổng quan</a><a href="#symbols">Ký hiệu</a><a href="#axioms">Tiên đề</a><a href="#laws">Định luật</a><a href="#properties">Tính chất</a><a href="#formulas">Công thức</a><a href="#theory">Lý thuyết</a><a href="#model">Mô hình</a><a href="#videos">Video</a><a href="#images">Hình ảnh</a><a href="#calculator">Máy tính</a><a href="#sources">Nguồn</a>
+</div></div>
+<div class="wrap">
+<header id="overview">
+  <div class="hero">
+    <div class="badge">O-TA-KO RESEARCH • COMPLETE RESEARCH PORTAL v5 • MOBILE SAFE</div>
+    <h1>O-Ta-Ko Theory</h1>
+    <p class="lead">A source-preserving research site assembled from the public GitHub repository <a href="https://github.com/Protoveres1secon/Otako-Theory-Research" target="_blank">Protoveres1secon/Otako-Theory-Research</a>. The text below preserves the repository wording rather than silently correcting, reconciling, or filling gaps.</p>
+    <div class="meta-grid" style="margin-top:16px">
+      <div class="meta"><strong>Tác giả</strong>Nguyễn Tuấn Kiệt / Kiet (theo các nguồn trong repository)</div>
+      <div class="meta"><strong>Địa điểm</strong>Việt Nam</div>
+      <div class="meta"><strong>Thời điểm lên ý tưởng</strong>Cuối tháng Năm</div>
+      <div class="meta"><strong>Ra mắt trực tuyến</strong>Cuối tháng Sáu</div>
+      <div class="meta"><strong>Trạng thái</strong>99,98% hoàn thành; đang chờ cộng đồng khoa học xác minh và thẩm định.</div>
+      <div class="meta"><strong>Repository status</strong>Experimental development; not yet peer-reviewed or scientifically validated.</div>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="theory"><h2>1. Core Theory</h2>
+  <article class="doc-card" id="doc-papers-otako-theory-v0-1-md">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>otako-theory-v0.1.md</h3></div>
+      <div class="source-path">papers/otako-theory-v0.1.md</div>
+      <div class="doc-body">O-Ta-Ko Theory
+
+Part I. Fundamental Symbols
+
+Symbol	Definition
+
+O	O-Ta-Ko System
+
+d	Binh Domain
+
+c	Chum Domain
+
+a	Binh Entry Point
+
+b	Binh Terminal Point
+
+n	Entity / Object
+
+Part II. Logical Operators
+
+Symbol	Meaning
+
+→	Move Toward
+
+⇒	Implies
+
+∉⇒	Inaccessible To
+
+*	Traverse Through
+
+Part III.
+ 
+ Measurement Symbols
+
+Symbol	Definition
+
+□	Unit Cell
+
+□₁	Cell No.1
+
+T	Remaining O-Ta Region
+
+T₁	Remaining O-Ta Region inside Cell No.1
+
+Part IV. Relational Operators
+
+Membership
+
+Notation:
+
+n(d)
+
+Definition:
+
+Entity n belongs to Binh Domain d.
+
+General Form:
+
+Entity(Domain)
+
+Examples:
+
+a(d)
+
+→ Entry Point a belongs to Binh Domain.
+
+n(d)
+
+→ Entity n belongs to Binh Domain.
+
+n(c)
+
+→ Entity n belongs to Chum Domain.
+
+Traversal
+
+Notation:
+
+n∗d
+
+Definition:
+
+Entity n traverses Domain d.
+
+Part V.
+
+Fundamental Equation
+
+n(d)⇒n∗a→b
+
+Definition:
+
+If entity n belongs to Binh Domain, then its valid trajectory is constrained from the Binh Entry Point toward the Binh Terminal Point.
+
+Part VI. Fundamental Theorem
+
+n(d)⇒n∉⇒c
+
+Definition:
+
+Any entity existing inside the Binh Domain is fundamentally inaccessible to the Chum Domain.
+
+Terminology Note
+
+The terms Binh and Chum are proper nouns defined exclusively within the O-Ta-Ko Theory.
+
+They do not refer to ordinary physical containers (such as bottles or jars) and must not be translated in academic or technical 
+
+Author: Kiet
+
+Location: Vietnam
+
+Status: 99.98% complete; awaiting verification and validation by the scientific community.
+
+This is the first article; there are others, but they are not yet ready for publication, and I require support from the community.
+
+Editing rights: Reserved by the author.
+
+Anyone wishing to contribute is welcome to reply; however, please do not delete or disrupt this "O-ta-ko" version.
+
+-Link : "  https://github.com/Protoveres1secon/Otako-Theory-Research/blob/main/papers/02-distribution-symmetry-stability.md            "
+</div>
+    </article>
+
+<div class="panel">
+  <h3 style="margin-top:0">Readable mathematical notation</h3>
+  <p class="muted">These display cards render expressions already present in the repository sources; they do not introduce new O-Ta-Ko rules.</p>
+  <div class="formula-gallery">
+    <div class="formula-card"><div class="eq">n(d) ⇒ n * a → b</div><div class="caption">Fundamental Equation</div></div>
+    <div class="formula-card"><div class="eq">n(d) ⇒ n ∉⇒ c</div><div class="caption">Fundamental Theorem</div></div>
+    <div class="formula-card"><div class="eq">g ≠ 0</div><div class="caption">Axiom 6 condition in the source text</div></div>
+    <div class="formula-card"><div class="eq">E<sub>n</sub> → 0 ⇒ n → ∅</div><div class="caption">Axiom 6 — energy extinction case</div></div>
+    <div class="formula-card"><div class="eq">S<sub>1</sub> : S<sub>4</sub> : S<sub>7</sub> ≈ 1 : 2 : 1</div><div class="caption">Formula 3 — conceptual area ratio</div></div>
+    <div class="formula-card"><div class="eq">a<sub>1</sub> &gt; a<sub>2</sub></div><div class="caption">Formula 5 — nested system</div></div>
+  </div>
+</div>
+</section>
+
+
+<section class="section" id="symbols"><h2>Ký hiệu O-Ta-Ko</h2>
+  <div class="panel">
+    <p class="muted">Bảng này trình bày riêng các ký hiệu đã xuất hiện trong <code>papers/otako-theory-v0.1.md</code>. Không bổ sung ký hiệu mới ngoài nguồn.</p>
+    <div class="symbol-grid">
+      <div class="symbol-card"><div class="symbol-head">Ký hiệu cơ bản</div><table class="doc-table symbol-table"><thead><tr><th>Ký hiệu</th><th>Định nghĩa trong nguồn</th></tr></thead><tbody>
+        <tr><td>O</td><td>O-Ta-Ko System</td></tr>
+        <tr><td>d</td><td>Binh Domain</td></tr>
+        <tr><td>c</td><td>Chum Domain</td></tr>
+        <tr><td>a</td><td>Binh Entry Point</td></tr>
+        <tr><td>b</td><td>Binh Terminal Point</td></tr>
+        <tr><td>n</td><td>Entity / Object</td></tr>
+      </tbody></table></div>
+      <div class="symbol-card"><div class="symbol-head">Toán tử logic</div><table class="doc-table symbol-table"><thead><tr><th>Ký hiệu</th><th>Ý nghĩa trong nguồn</th></tr></thead><tbody>
+        <tr><td>→</td><td>Move Toward</td></tr>
+        <tr><td>⇒</td><td>Implies</td></tr>
+        <tr><td>∉⇒</td><td>Inaccessible To</td></tr>
+        <tr><td>*</td><td>Traverse Through</td></tr>
+      </tbody></table></div>
+      <div class="symbol-card"><div class="symbol-head">Ký hiệu đo lường</div><table class="doc-table symbol-table"><thead><tr><th>Ký hiệu</th><th>Định nghĩa trong nguồn</th></tr></thead><tbody>
+        <tr><td>□</td><td>Unit Cell</td></tr>
+        <tr><td>□₁</td><td>Cell No.1</td></tr>
+        <tr><td>T</td><td>Remaining O-Ta Region</td></tr>
+        <tr><td>T₁</td><td>Remaining O-Ta Region inside Cell No.1</td></tr>
+      </tbody></table></div>
+      <div class="symbol-card"><div class="symbol-head">Ký hiệu quan hệ / phép biểu diễn</div><table class="doc-table symbol-table"><thead><tr><th>Biểu diễn</th><th>Ý nghĩa trong nguồn</th></tr></thead><tbody>
+        <tr><td>Entity(Domain)</td><td>General Form</td></tr>
+        <tr><td>n(d)</td><td>Entity n belongs to Binh Domain d.</td></tr>
+        <tr><td>a(d)</td><td>Entry Point a belongs to Binh Domain.</td></tr>
+        <tr><td>n(c)</td><td>Entity n belongs to Chum Domain.</td></tr>
+        <tr><td>n∗d</td><td>Entity n traverses Domain d.</td></tr>
+        <tr><td>n(d)⇒n∗a→b</td><td>Fundamental Equation</td></tr>
+        <tr><td>n(d)⇒n∉⇒c</td><td>Fundamental Theorem</td></tr>
+      </tbody></table></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="axioms"><h2>2. Axioms — source text</h2>
+  <div class="panel"><div class="note">This site keeps the numbering exactly as found in the source files. Where different source lines use different labels, the site preserves those lines instead of deciding which one is “correct”.</div></div>
+  <article class="doc-card" id="doc-papers-O-Ta-Ko-Theory-—-Axiomatic-Foundations-|-Part-VI-md">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>O-Ta-Ko Theory — Axiomatic Foundations | Part VI.md</h3></div>
+      <div class="source-path">papers/O-Ta-Ko Theory — Axiomatic Foundations | Part VI.md</div>
+      <div class="doc-body">O-Ta-Ko Theory
+Part VII. Fundamental Axioms
+Axiom 1 — Unified Dual-Domain Structure
+
+The O-Ta-Ko System consists of two geometric domains, d and c, which are linked together as one unified structure.
+
+Binh and Chum are not independent structures; they are domains within the unified O-Ta-Ko structure.
+
+Axiom 2 — Dual-Terminal Structure
+
+The O-Ta-Ko System possesses exactly two endpoints: a and b.
+
+No third endpoint exists within the fundamental O-Ta-Ko structure.
+
+Axiom 3 — Fundamental Trajectory
+
+n(d) → n*a → b
+
+An entity belonging to Binh Domain d follows the fundamental relation from its interaction with Entry Point a toward Terminal Point b.
+
+Axiom 4 — Inaccessibility
+
+n(d) ⇒ n ∉⇒ c
+
+An entity n belonging to Binh Domain d is inaccessible to Chum Domain c in the absence of an external force.
+
+Axiom 5 — Dynamic Domain
+
+Chum Domain c exists, but it is not a path of traversal.
+
+c is a dynamic domain, rather than a route through which an entity can simply travel.
+</div>
+    </article>
+  <article class="doc-card" id="doc-papers-O-Ta-Ko-Theory-—-Axiom-6:-Gravity-(07)-md">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>O-Ta-Ko Theory — Axiom 6: Gravity (07).md</h3></div>
+      <div class="source-path">papers/O-Ta-Ko Theory — Axiom 6: Gravity (07).md</div>
+      <div class="doc-body">O-Ta-Ko Theory — Axiom 6: Gravity
+
+Section II — O-Ta-Ko Expansion
+
+Axiom 6 — Gravity
+
+Within every gravitational environment:
+
+g
+
+=0
+
+An entity n subjected to gravity follows:
+
+n(d)⇒n∗a→b
+
+The trajectory from point a to point b is considered valid only when:
+
+g0
+
+When gravity is absent:
+
+g=0
+
+O-Ta-Ko has five possible cases:
+
+Case 1 — Trapped
+
+n is trapped
+
+Entity n cannot reach the terminal point.
+
+Case 2 — Inertial motion
+
+n→b
+
+Entity n continues toward b through its existing motion.
+
+Case 3 — Return
+
+n→starting point
+
+Entity n returns to its original position.
+
+Case 4 — Escape
+
+Entity n escapes from O-Ta-Ko:
+
+n→b→a
+
+or it may leave through both endpoints:
+
+n→aandn→b
+
+That is, n may exit through both a and b, or pass through b first and a afterward.
+
+Case 5 — Energy extinction
+
+Entity n loses all of its energy and disappears immediately within O-Ta.
+
+E
+n
+	​
+
+→0⇒n→∅
+Core distinction
+
+These cases describe what can happen to an entity when the gravitational constraint g
+
+=0 is absent. They are cases of Axiom 6, not separate axioms.
+</div>
+    </article>
+  <article class="doc-card" id="doc-papers-O-Ta-Ko-Theory-—-Axioms-7–9:-Size-Limitation,-Measurement-Grid-&amp;-Excluded-Region-(08)-md">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>O-Ta-Ko Theory — Axioms 7–9: Size Limitation, Measurement Grid &amp; Excluded Region (08).md</h3></div>
+      <div class="source-path">papers/O-Ta-Ko Theory — Axioms 7–9: Size Limitation, Measurement Grid &amp; Excluded Region (08).md</div>
+      <div class="doc-body">O-Ta-Ko Theory — Axiomatic Foundations
+Axioms 7–9
+Axiom 7 — Size Limitation
+
+If the size of n satisfies:
+
+n≥a
+
+then the object cannot enter a.
+
+Therefore:
+
+n∗a
+
+does not exist, and consequently:
+
+n is stuck
+	​
+
+
+Relation to Axiom 6:
+Axiom 7 belongs to Case 1 of Axiom 6.
+
+Axiom 8 — Measurement Grid
+
+A 3×3 square grid is used for measurement.
+
+The grid does not represent n and does not affect the O-Ta structure.
+
+Therefore, divisions from 1 to 9 are treated as reference frames.
+
+Axiom 9 — Excluded Region
+
+Parts measured outside the boundary curve are classified as an excluded region and are not counted.
+
+Let this excluded region be:
+
+S
+no
+	​
+
+
+Then the valid region is:
+
+S=S
+O−Ta
+	​
+
+	​
+
+
+Not:
+
+S=S
+O−Ta
+	​
+
++S
+no
+	​
+
+
+Therefore, quantities such as S, perimeter, length, and other measurements are evaluated only for the portion contained within O-Ta.
+</div>
+    </article>
+  <article class="doc-card" id="doc-papers-O-ta-ko-(-09-)-md">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>O-ta-ko ( 09 ).md</h3></div>
+      <div class="source-path">papers/O-ta-ko ( 09 ).md</div>
+      <div class="doc-body">O-Ta-Ko Theory — Axiom 10:   The 1-2-1 Distribution Law
+
+Axiom 9 — The 1-2-1 Distribution Law
+
+The 1-2-1 Law is the distribution rule governing the internal structure of an O-Ta configuration.
+
+In a basic O-Ta structure, the distribution follows the pattern:
+
+1 → 2 → 1
+
+For example, when comparing the values arranged along the vertical structure:
+
+1 → 1
+4 → 2
+7 → 1
+
+the central section contains the greatest concentration, while the two outer sections contain smaller corresponding portions.
+
+The 1-2-1 Law describes the structural distribution, not merely the numerical value of an individual point.
+
+Even when the O-Ta structure is stretched, compressed, or otherwise scaled, the 1-2-1 distribution remains structurally unchanged as long as the configuration itself remains an O-Ta structure.
+
+Therefore, deformation may change the numerical values or scale of the configuration, but it does not by itself eliminate the 1-2-1 Law.
+
+Axiom 11: Recursion
+
+If the head shape is a new 10-Ta, then the entire set of rules is applied again.
+
+Example:
+
+Cell 5 contains the head shape.
+
+The head shape is then divided into a 3×3 structure.
+
+Therefore, the 1-2-1 Law is reapplied.
+
+Head shape→3×3→reapply the 1-2-1 Law
+	​
+
+O-Ta-Ko Theory — Axiom 11: Deformation
+
+Axiom 12: Deformation
+
+If an O-Ta is only stretched or deformed, then the 1-2-1 Law does not change.
+
+Only the values change.
+
+Model Boundary
+
+However, if the O-Ta becomes concave, cut, or otherwise structurally broken, it is no longer an O-Ta.
+
+Stretching / deformation→1-2-1 Law unchanged
+	​
+
+Only the values change
+	​
+
+Concave / cut / structural break→outside the O-Ta model
+	​
+
+
+Model boundary: once the structure is concave, cut, or otherwise broken, it is no longer considered O-Ta.
+</div>
+    </article>
+  <article class="doc-card" id="doc-papers-Otako-law-(10)-md">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>Otako law-(10).md</h3></div>
+      <div class="source-path">papers/Otako law-(10).md</div>
+      <div class="doc-body">Axiom 13 — Nesting (Calculation)
+
+If O-Ta 2 is placed into O-Ta 1, then the two O-Ta structures have a relationship and are subsequently combined.
+
+The error is calculated; when the structures are combined, the resulting error must also be calculated, ensuring that the rule is not violated.
+
+(For now, there is no specific rule.)
+
+Axiom 14 — Inescapability
+
+If an O-Ta exists without external force, an external agent, or a very large change, then every object remains constrained.
+
+n(d)⇒n∗a→b
+
+(Cannot reach the path within the Chum.)
+
+Axiom 15 — External Force
+
+If an external force appears:
+
+Examples: pushing force, pulling force, attractive force, a human, or a machine.
+
+Then the O-Ta law is affected, and those affected objects are no longer O-Ta.
+</div>
+    </article>
+</section>
+
+<section class="section" id="laws"><h2>3. O-Ta Laws</h2>
+  <article class="doc-card" id="doc-papers-otako-(05)-o-ta-laws-md">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>otako (05)-o-ta-laws.md</h3></div>
+      <div class="source-path">papers/otako (05)-o-ta-laws.md</div>
+      <div class="doc-body">O-Ta LAWS
+
+Law I: (First-Direction Law)
+
+Compact form:
+| n(d) =&gt; n * a → b |
+
+Full form:
+| n(d) =&gt; n * a → n * b |
+
+Law II: Inaccessibility
+
+n(d) ∉ → c
+
+Law III: Infinite Doubling Law
+
+If multiple O-Ta structures are joined together,
+there will be 1 chum that cannot be entered.
+
+Law IV: Structural Conservation
+(stability)
+
+- small
+- nested
+- connected
+- expanded
+- enlarged
+
+→ does not eliminate Laws I and II
+
+Law V: External Force
+
+When an external object intervenes,
+the system will no longer be completely constrained by O-Ta.
+</div>
+    </article>
+</section>
+
+<section class="section" id="properties"><h2>4. Properties</h2>
+  <article class="doc-card" id="doc-papers-02-distribution-symmetry-stability-md">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>02-distribution-symmetry-stability.md</h3></div>
+      <div class="source-path">papers/02-distribution-symmetry-stability.md</div>
+      <div class="doc-body">Property III — Invariance of the 1–2–1 Distribution Rule
+Statement
+
+For any O-Ta, after partitioning into a 3 × 3 grid, every row and every column follows the dist
+
+1 – 2 – 1
+Distribution Rule
+
+The distribution is not determined by:
+
+Geometry
+Perimeter
+Area
+Size
+
+Nghĩa là: chỉ cần chia thành 3×3 thì quy luật xuất hiện, bất kể hình dạng, chu vi, diện tích hay kích thước.
+
+Property IV — Symmetry
+Statement
+
+If one column satisfies
+
+1 – 2 – 1
+
+then the opposite (mirror) column also satisfies
+
+1 – 2 – 1
+Example
+147 ↔ 148
+
+(always symmetric)
+
+Property V — Stability During Expansion
+Statement
+
+If O-Ta expands, then:
+
+the internal O-Ta does not lose its structure;
+O-Ta also appears externally;
+the two systems remain connected.
+
+Note: The author possesses the complete manuscript and seeks verification from the scientific community; one page will be posted daily.
+</div>
+    </article>
+  <article class="doc-card" id="doc-papers-otako-(03-)-property-06-infinite-nesting-md">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>otako (03 )-property-06-infinite-nesting.md</h3></div>
+      <div class="source-path">papers/otako (03 )-property-06-infinite-nesting.md</div>
+      <div class="doc-body"># O-Ta Theory — Property 6: Infinite Nesting
+
+If the O-Ta nesting process continues indefinitely, the laws governing
+the O-Ta system remain unchanged.
+
+Only the representative value C changes according to the nesting level.
+
+Therefore, infinite nesting does not create a new governing law at every
+level. The O-Ta principle continues to operate regardless of the depth
+of nesting.
+
+---
+
+## 2. Representative-Value Sequence
+
+For successive O-Ta levels, the representative values follow a strictly
+decreasing order:
+
+a₁ &gt; a₂ &gt; a₃ &gt; ...
+
+Equivalently:
+
+aₙ₊₁ &lt; aₙ
+
+This describes the change in the representative value as the nesting
+process continues.
+
+---
+
+## 3. Two-Level O-Ta Structure
+
+Consider two O-Ta structures:
+
+B¹ and B².
+
+B² is nested inside B¹.
+
+When B² is nested into B¹, the bottom of B² does not completely reach
+the corresponding position of B¹.
+
+Instead, the bottom of B² is displaced by one interval relative to the
+previous position.
+
+---
+
+## 4. Recursive Nesting
+
+The displacement created by one O-Ta nesting becomes the stopping
+position for the next O-Ta.
+
+The process can therefore continue:
+
+B¹ → B² → B³ → B⁴ → ...
+
+The same O-Ta rule continues to be applied at each successive level.
+
+---
+
+## 5. Infinite Continuation
+
+When the O-Ta nesting process continues without limit:
+
+B¹ → B² → B³ → ...
+
+the governing O-Ta laws remain unchanged.
+
+The representative values continue to follow:
+
+a₁ &gt; a₂ &gt; a₃ &gt; ...
+
+while C changes according to the nesting level.
+
+---
+
+## 6. Nesting-Offset Principle
+
+At each nesting operation, the bottom of the next O-Ta is displaced by
+one additional interval relative to the preceding O-Ta.
+
+This displacement becomes the stopping position for the next nesting
+operation.
+
+The process is therefore repeated from one nesting level to the next.
+
+---
+
+## 7. Infinite O-Ta Nesting
+
+Let the nesting continue indefinitely:
+
+B¹ ⊃ B² ⊃ B³ ⊃ ... ⊃ Bⁿ ⊃ ...
+
+The corresponding representative values satisfy:
+
+a₁ &gt; a₂ &gt; a₃ &gt; ... &gt; aₙ &gt; ...
+
+The governing O-Ta law remains unchanged throughout the nesting process.
+
+---
+
+## 8. Summary
+
+Property 6 establishes:
+
+1. O-Ta nesting can continue indefinitely.
+2. The governing O-Ta laws remain unchanged.
+3. The representative value C changes according to the nesting level.
+4. The representative values follow a strictly decreasing order:
+
+   a₁ &gt; a₂ &gt; a₃ &gt; ...
+
+5. The bottom of the next O-Ta is displaced by one additional interval.
+6. This displacement becomes the stopping position for the following
+   O-Ta.
+7. The nesting process can therefore continue recursively:
+
+   B¹ → B² → B³ → ...
+
+---
+
+**Previous:** Property 5 — Stability
+
+**Current:** Property 6 — Infinite Nesting
+
+**Next:** Property 7 — To be added from the original formulation
+
+While I'm at it, let me also provide some further explanation:For successive O-Ta levels, the representative values follow a strictly decreasing order:
+
+a
+1
+	​
+
+&gt;a
+2
+	​
+
+&gt;a
+3
+	​
+
+&gt;⋯
+
+Here, a
+ n
+	​
+
+ denotes the representative value at nesting level n.
+In other words, each successive nesting level has a smaller representative value than the preceding level.
+
+Equivalently:
+
+a
+ n+1
+	​
+
+&lt;a
+ n
+	​
+
+
+This means that the representative value at the next nesting level is smaller than the value at the current level.
+</div>
+    </article>
+  <article class="doc-card" id="doc-papers-otako-(04)-property-07-measurement-system-md">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>otako (04)-property-07-measurement-system.md</h3></div>
+      <div class="source-path">papers/otako (04)-property-07-measurement-system.md</div>
+      <div class="doc-body">Property 7 — Independence from the Measurement System
+
+The O-Ta laws are independent of the measurement system used to describe a quantity.
+
+If the measurement unit is changed, the numerical value representing the quantity changes, but the governing O-Ta laws remain unchanged.
+
+For example, a length may be represented using:
+
+millimeters (mm)
+centimeters (cm)
+meters (m)
+kilometers (km)
+and so on.
+
+Changing the unit changes only the numerical representation of the quantity.
+
+The underlying O-Ta laws do not change.
+
+Changing the measurement unit changes the numerical value, not the governing law.
+
+Therefore, the O-Ta system remains mathematically consistent regardless of the valid measurement unit used to represent its quantities.
+
+Property 8 — Geometric Conditions of the Object
+
+O-Ta formulas that depend on geometric quantities are applied according to the geometric structure of the object being considered.
+
+Depending on the formula, the relevant geometric quantities may include:
+
+diameter
+radius
+circumference
+area
+length
+width
+or other equivalent geometric quantities defined within the O-Ta model.
+
+These quantities describe the geometric properties that are relevant to a particular O-Ta calculation.
+
+Irregular Objects
+
+Objects do not necessarily have regular geometric shapes.
+
+Examples include:
+
+naturally formed rocks
+irregular pieces of soil
+deformed masses
+other naturally irregular objects.
+
+For such objects, certain geometric quantities may not have a unique or directly measurable value.
+
+For example, an irregular rock may not have a single well-defined diameter or radius.
+
+In such cases, a geometric O-Ta formula that specifically requires such a quantity cannot be directly evaluated using that undefined parameter.
+
+However, this does not mean that the object is outside the O-Ta system.
+
+The object remains subject to the governing O-Ta laws.
+
+Its irregular shape does not create an exception to those laws.
+
+The limitation applies only to the specific geometric representation required by a particular formula.
+
+Core Principle
+
+Irregular geometry does not exempt an object from the O-Ta laws. It only limits the direct application of geometric formulas whose required geometric quantities cannot be uniquely defined.
+
+Thus:
+
+Irregular object → certain geometric quantities may be undefined → the corresponding geometric formula cannot be directly evaluated → the O-Ta laws themselves remain unchanged and continue to apply.
+
+Relationship to the O-Ta System
+
+Property 8 therefore concerns the geometric applicability of individual formulas, not the validity of the O-Ta system itself.
+
+An object may have an irregular shape and still remain completely governed by O-Ta.
+
+The O-Ta laws do not require every object to have a simple or ideal geometric form.
+
+Only the formulas that explicitly depend on a particular geometric quantity require that quantity to be defined.
+
+No reduction of O-Ta's governing role occurs because of geometric irregularity.
+
+Summary
+
+Property 7 — Independence from the Measurement System
+
+Changing the measurement unit changes the numerical representation of a quantity, but does not change the O-Ta laws.
+
+Property 8 — Geometric Conditions of the Object
+
+Geometric O-Ta formulas depend on the geometric quantities required by those formulas. Irregular objects may lack uniquely defined geometric quantities, preventing direct evaluation of a particular formula. Nevertheless, the objects remain fully within the O-Ta system and remain subject to its governing laws.
+
+Warning: Content requires verification.
+</div>
+    </article>
+</section>
+
+<section class="section" id="formulas"><h2>5. Formulas & Measurement</h2>
+  <article class="doc-card" id="doc-papers-The-11-Law-of-Otako:-2D-Spatial-Area-Formula-md">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>The 11 Law of Otako: 2D Spatial Area Formula.md</h3></div>
+      <div class="source-path">papers/The 11 Law of Otako: 2D Spatial Area Formula.md</div>
+      <div class="doc-body">Otako Theorem: O-Ta Measurement System (International Version)
+
+Formula 1: 2D Calculation of (O)
+Observe O-Ta from a top-down view. O-Ta is bounded within a 3×3 square grid.
+
+Grid-cell arrangement (Rows/Columns):
+
+1	2	3
+4	5	6
+7	8	9
+
+Formula 2: Distribution Law
+Each row or column follows a 1–2–1 structural ratio.
+
+The 1–2–1 ratio is a geometric rule, not an arithmetic operation.
+
+Example: analysis of Column 1 (Cells 1, 4, and 7):
+
+Cell 1: approximately 1/2 part
+Cell 4: approximately 2 parts (about 1.9)
+Cell 7: approximately 1/2 part
+
+Formula 3: Area Measurement (S
+i
+	​
+
+)
+Let S
+i
+	​
+
+ denote the area of O contained within cell i.
+
+Therefore, for Cells 1, 4, and 7:
+
+S
+1
+	​
+
+:S
+4
+	​
+
+:S
+7
+	​
+
+≈1:2:1
+
+Note: This is the idealized ratio in the conceptual model; in practice, it is only an approximation.
+</div>
+    </article>
+  <article class="doc-card" id="doc-papers-O-ta-ko-12--md">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>O-ta-ko 12 .md</h3></div>
+      <div class="source-path">papers/O-ta-ko 12 .md</div>
+      <div class="doc-body">Formula 4: Total Area
+
+if S = S1 + S2 + ... S...
+
+then only + the part belonging to O-Ta
+
+the shaded part outside O-Ta is not counted
+
+Formula 5: Nested System
+
+if o2 is inside O1
+the Chum Domain changes correspondingly
+then: [ a1 &gt; a2 ]
+</div>
+    </article>
+  <article class="doc-card" id="doc-papers-O-Ta-Occupancy-Formulas-in-a-3×3-Grid-md">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>O-Ta Occupancy Formulas in a 3×3 Grid.md</h3></div>
+      <div class="source-path">papers/O-Ta Occupancy Formulas in a 3×3 Grid.md</div>
+      <div class="doc-body">[O-Ta-Ko_Theory_International.docx](https://github.com/user-attachments/files/32052371/O-Ta-Ko_Theory_International.docx)
+This formula is very important, so I can't publicly share it; instead, I invite everyone to download it and check it out for themselves.
+Rest assured—if it's a scam link, I'll fly to the moon. I swear it's not malicious.
+
+
+By the way, this version is quite large; I hope it doesn't lag when you open it.
+</div>
+    </article>
+</section>
+
+<section class="section"><h2>6. Fundamental Equation & Fundamental Theorem</h2>
+  <div class="two">
+    <div class="panel"><h3>Fundamental Equation</h3><div class="doc-body">n(d)⇒n∗a→b</div></div>
+    <div class="panel"><h3>Fundamental Theorem</h3><div class="doc-body">n(d)⇒n∉⇒c</div></div>
+  </div>
+  <div class="panel" style="margin-top:14px"><p>These two expressions are copied from <span class="kbd">papers/otako-theory-v0.1.md</span>; the full source text above contains their definitions.</p></div>
+</section>
+
+<section class="section" id="model"><h2>7. O-Ta-Ko Simplified Model</h2>
+  <article class="doc-card" id="doc-papers-The-O-Ta-Ko-Simplified-Model-md">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>The O-Ta-Ko Simplified Model.md</h3></div>
+      <div class="source-path">papers/The O-Ta-Ko Simplified Model.md</div>
+      <div class="doc-body"># O-Ta-Ko Simplified Model
+
+The **O-Ta-Ko Simplified Model** is a simplified geometric representation of the original O-Ta-Ko structure.
+
+The purpose of this model is to make the structure easier to construct, visualize, measure, and study using basic geometric methods.
+
+The simplified model is intended as a **supporting model** and does not replace the original O-Ta-Ko structure.
+
+## 1. Basic Structure
+
+The simplified model consists of two main parts:
+
+- **Chum** — represented by a square block.
+- **Bình** — represented by a hollow circular cylindrical structure located in the central part of the Chum.
+
+This simplified representation replaces part of the more complex geometry of the original O-Ta-Ko structure with basic geometric shapes.
+
+## 2. Standard Geometric Formulas
+
+The simplified model can be examined using standard formulas from elementary geometry.
+
+For example, the area of a square with side length `a` is:
+
+$$
+S = a^2
+$$
+
+The circumference of a circle with radius `r` is:
+
+$$
+C = 2\pi r
+$$
+
+The area of a circle with radius `r` is:
+
+$$
+S = \pi r^2
+$$
+
+The volume of a cylinder with radius `r` and height `h` is:
+
+$$
+V = \pi r^2 h
+$$
+
+These are **standard geometric formulas**. They are used only as examples for calculations involving the simplified model and are not newly derived formulas of O-Ta-Ko.
+
+## 3. Why Use a Simplified Model?
+
+The simplified model makes the structure easier to work with because basic geometric shapes can be constructed and measured more easily.
+
+It can be useful for:
+
+- simple geometric calculations;
+- physical model construction;
+- visualization;
+- measurements and experiments;
+- explaining the general structure of O-Ta-Ko.
+
+The simplified model therefore provides a practical way to study some geometric aspects of O-Ta-Ko without reproducing the full complexity of the original structure.
+
+## 4. Main Limitation
+
+The main limitation of the simplified model is its treatment of the connection between **Chum** and **Bình**.
+
+In the original O-Ta-Ko structure, this connection contains a **smooth and continuous curved transition**.
+
+The simplified model replaces this curved transition with simpler geometric forms. Because of this simplification, the connection may contain a **sharp transition, such as a 90° corner**, instead of the smooth curvature of the original structure.
+
+This means that the simplified model is easier to construct and calculate, but it does not completely preserve the geometric continuity of the original O-Ta-Ko structure.
+
+## 5. Original Model vs. Simplified Model
+
+| Feature | Original O-Ta-Ko Model | Simplified Model |
+|---|---|---|
+| Geometry | More complex curved structure | Basic geometric shapes |
+| Connection | Smooth and continuous | Simplified transition |
+| Calculation | More difficult | Easier |
+| Construction | More difficult | Easier |
+| Measurement | More complex | Easier |
+| Role | Primary model | Supporting model |
+
+## Conclusion
+
+The **O-Ta-Ko Simplified Model** provides a simpler geometric representation of the original O-Ta-Ko structure.
+
+It allows standard elementary-geometry formulas to be used for basic calculations and makes physical construction, measurement, and visualization easier.
+
+However, the simplification also removes part of the smooth curved transition present in the original structure.
+
+Therefore, the simplified model should be considered a **supporting model for O-Ta-Ko**, while the **original O-Ta-Ko structure remains the primary model**.
+</div>
+    </article>
+</section>
+
+<section class="section" id="videos"><div class="section-head"><div><h2>8. Video Library</h2><p class="section-kicker">10 video entries from the repository. Videos are loaded only after you choose one, so the page does not open 10 YouTube frames at startup.</p></div></div>
+  <div class="grid video-grid"><article class="video-card lazy-video" data-video-id="viokd33SSUA" data-video-title="Video 01 — Testing fuels to evaluate the Otako theory">
+      <div class="video-thumb" role="button" tabindex="0" aria-label="Load Video 01 — Testing fuels to evaluate the Otako theory">
+        <div class="play">▶</div><div class="vnum">VIDEO 01</div>
+      </div>
+      <h3>Video 01 — Testing fuels to evaluate the Otako theory</h3>
+      <div class="video-src">Source file: <code>video/Testing fuels to evaluate the Otako theory.md</code></div>
+    </article><article class="video-card lazy-video" data-video-id="M3tkTzK3g1c" data-video-title="Video 02 — Introduction">
+      <div class="video-thumb" role="button" tabindex="0" aria-label="Load Video 02 — Introduction">
+        <div class="play">▶</div><div class="vnum">VIDEO 02</div>
+      </div>
+      <h3>Video 02 — Introduction</h3>
+      <div class="video-src">Source file: <code>video/testing fuels to ecaluate the O-ta-ko ( 02 ).md</code></div>
+    </article><article class="video-card lazy-video" data-video-id="5H8BaU1KG_I" data-video-title="Video 03 — O-ta-ko test 03">
+      <div class="video-thumb" role="button" tabindex="0" aria-label="Load Video 03 — O-ta-ko test 03">
+        <div class="play">▶</div><div class="vnum">VIDEO 03</div>
+      </div>
+      <h3>Video 03 — O-ta-ko test 03</h3>
+      <div class="video-src">Source file: <code>video/Testing fuels... the Otako ( 03 ).md</code></div>
+    </article><article class="video-card lazy-video" data-video-id="fqTKOtFHQcA" data-video-title="Video 04 — O-ta-ko(04 test)">
+      <div class="video-thumb" role="button" tabindex="0" aria-label="Load Video 04 — O-ta-ko(04 test)">
+        <div class="play">▶</div><div class="vnum">VIDEO 04</div>
+      </div>
+      <h3>Video 04 — O-ta-ko(04 test)</h3>
+      <div class="video-src">Source file: <code>video/O-ta-ko fules to......... ( 04 ).md</code></div>
+    </article><article class="video-card lazy-video" data-video-id="FW390x7OzIA" data-video-title="Video 05 — O-ta-ko test">
+      <div class="video-thumb" role="button" tabindex="0" aria-label="Load Video 05 — O-ta-ko test">
+        <div class="play">▶</div><div class="vnum">VIDEO 05</div>
+      </div>
+      <h3>Video 05 — O-ta-ko test</h3>
+      <div class="video-src">Source file: <code>video/O-ta-ko tesst (05).md</code></div>
+    </article><article class="video-card lazy-video" data-video-id="CvP4CUDl2yI" data-video-title="Video 06 — O-ta-ko test 06">
+      <div class="video-thumb" role="button" tabindex="0" aria-label="Load Video 06 — O-ta-ko test 06">
+        <div class="play">▶</div><div class="vnum">VIDEO 06</div>
+      </div>
+      <h3>Video 06 — O-ta-ko test 06</h3>
+      <div class="video-src">Source file: <code>video/O-ta-ko test ( 06 ).md</code></div>
+    </article><article class="video-card lazy-video" data-video-id="Av-AzIeDJS0" data-video-title="Video 07 — O-ta-ko test 07">
+      <div class="video-thumb" role="button" tabindex="0" aria-label="Load Video 07 — O-ta-ko test 07">
+        <div class="play">▶</div><div class="vnum">VIDEO 07</div>
+      </div>
+      <h3>Video 07 — O-ta-ko test 07</h3>
+      <div class="video-src">Source file: <code>video/O-ta-ko test ( 07 ).md</code></div>
+    </article><article class="video-card lazy-video" data-video-id="P9xlITQeM_Q" data-video-title="Video 08 — Otako8">
+      <div class="video-thumb" role="button" tabindex="0" aria-label="Load Video 08 — Otako8">
+        <div class="play">▶</div><div class="vnum">VIDEO 08</div>
+      </div>
+      <h3>Video 08 — Otako8</h3>
+      <div class="video-src">Source file: <code>O-ta-ko test ( 08 ).md</code></div>
+    </article><article class="video-card lazy-video" data-video-id="GvL-JqWb4VI" data-video-title="Video 09 — O-ta-ko test 09">
+      <div class="video-thumb" role="button" tabindex="0" aria-label="Load Video 09 — O-ta-ko test 09">
+        <div class="play">▶</div><div class="vnum">VIDEO 09</div>
+      </div>
+      <h3>Video 09 — O-ta-ko test 09</h3>
+      <div class="video-src">Source file: <code>video/Mixed text  09 ( otako ).md</code></div>
+    </article><article class="video-card lazy-video" data-video-id="93jqdv3br_I" data-video-title="Video 10 — Otako10">
+      <div class="video-thumb" role="button" tabindex="0" aria-label="Load Video 10 — Otako10">
+        <div class="play">▶</div><div class="vnum">VIDEO 10</div>
+      </div>
+      <h3>Video 10 — Otako10</h3>
+      <div class="video-src">Source file: <code>video/Otako text big and small ( 10 ).md</code></div>
+    </article></div>
+</section>
+
+<section class="section" id="images"><h2>9. Image Archive</h2>
+  <p class="muted">The repository currently contains two PNG assets under <span class="kbd">Image Otako law/</span>. The images remain hosted by the GitHub repository and are shown here directly.</p>
+  <div class="grid">
+    <article class="image-card"><img loading="lazy" src="https://raw.githubusercontent.com/Protoveres1secon/Otako-Theory-Research/main/Image%20Otako%20law/dfbnfebb.png" alt="O-Ta-Ko image dfbnfebb.png"><strong>dfbnfebb.png</strong><a href="https://raw.githubusercontent.com/Protoveres1secon/Otako-Theory-Research/main/Image%20Otako%20law/dfbnfebb.png" target="_blank">Open raw image</a></article><article class="image-card"><img loading="lazy" src="https://raw.githubusercontent.com/Protoveres1secon/Otako-Theory-Research/main/Image%20Otako%20law/width_460.png" alt="O-Ta-Ko image width_460.png"><strong>width_460.png</strong><a href="https://raw.githubusercontent.com/Protoveres1secon/Otako-Theory-Research/main/Image%20Otako%20law/width_460.png" target="_blank">Open raw image</a></article>
+  </div>
+</section>
+
+<section class="section" id="calculator">
+  <div class="section-head">
+    <div>
+      <h2>10. O-Ta-Ko Computing System — 3-branch / 8-note, 5,040 XS</h2>
+      <p class="section-kicker">Full 5,040-configuration computation for both Hàm 6 and Hàm 2. The data is kept in memory only when needed; the interface renders one case or one visible slice at a time.</p>
+    </div>
+    <span class="status-chip">2 hàm • 2 × 5.040 XS</span>
+  </div>
+  <div class="calc-shell" id="otakoCalc">
+    <div class="calc-toolbar">
+      <div class="formula-main" aria-label="Công thức gốc">
+        <span>P =</span><span class="frac"><span class="top">6;2</span><span class="bottom">□□□</span></span><span>= 8</span>
+      </div>
+      <div class="calc-tabs" role="tablist" aria-label="Chọn hàm">
+        <button type="button" class="calc-tab active" data-fn="6">Hàm 6</button>
+        <button type="button" class="calc-tab" data-fn="2">Hàm 2</button>
+      </div>
+    </div>
+    <div class="calc-info" id="calcFunctionInfo"></div>
+
+    <div class="calc-rule-grid">
+      <div><b>A</b><span>Đọc trái → phải: số tiếp theo ≤ số hiện tại → chia; số tiếp theo &gt; số hiện tại → nhân.</span></div>
+      <div><b>B</b><span>Sau phép tính cuối: số nguyên chẵn → ÷2; số nguyên lẻ → +1; 1/-1 dừng; 0 loại.</span></div>
+      <div><b>C</b><span>Số thập phân hữu hạn: chỉ bỏ dấu thập phân, giữ nguyên toàn bộ chữ số.</span></div>
+      <div><b>D</b><span>Thập phân tuần hoàn: giữ chính xác dưới dạng phân số theo bộ xử lý hiện tại.</span></div>
+    </div>
+
+    <div class="calc-actions">
+      <div class="rowline">
+        <label>XS số <input id="caseNo" type="number" min="1" max="5040" value="1"></label>
+        <button type="button" id="showCaseBtn">Xem XS</button>
+        <button type="button" class="ghost" id="prevCaseBtn">← Trước</button>
+        <button type="button" class="ghost" id="nextCaseBtn">Sau →</button>
+      </div>
+      <div class="rowline">
+        <label>Tìm trong bộ XS <input id="caseSearch" type="search" placeholder="Ví dụ: 6,3,2"></label>
+        <button type="button" id="auditBtn">Tính & kiểm tra toàn bộ 5.040</button>
+      </div>
+    </div>
+
+    <div class="audit-progress" id="auditProgress" hidden>
+      <div class="progress-top"><span id="auditLabel">Đang tính…</span><strong id="auditPct">0%</strong></div>
+      <div class="progress-track"><div id="auditBar"></div></div>
+    </div>
+
+    <div class="calc-summary" id="calcSummary"></div>
+    <div class="calc-detail" id="calcDetail"></div>
+
+    <div class="case-table-wrap">
+      <div class="table-head"><strong>Danh sách XS</strong><span class="muted" id="caseRange">1–80 / 5.040 hiển thị</span></div>
+      <div class="case-scroll"><table class="case-table"><thead><tr><th>#</th><th>Ô1</th><th>Ô2</th><th>Ô3</th><th>Kết quả</th><th></th></tr></thead><tbody id="caseRows"></tbody></table></div>
+    </div>
+    <div class="calc-footnote">Module tính toán này chỉ mã hóa các quy tắc đã chốt trong quá trình xây dựng hệ 3 nhánh 8 nốt. Nó không được dùng để tự suy ra tiên đề/định luật mới trong kho lý thuyết.</div>
+  </div>
+</section><section class="section" id="sources"><h2>11. Full Source Index</h2>
+  <div class="panel">
+    <p><b>Hiển thị đọc:</b> phần tài liệu chính được trình bày lại để dễ đọc. Phần <b>Nguồn</b> bên dưới giữ nguyên văn bản nguồn đang có trong repository; không tự sửa nội dung lý thuyết.</p>
+    <p>Repository: <a href="https://github.com/Protoveres1secon/Otako-Theory-Research" target="_blank">https://github.com/Protoveres1secon/Otako-Theory-Research</a></p>
+    <p><b>Đối chiếu repository:</b> source index này bao phủ các tệp văn bản có nội dung của <code>main</code> (README, papers, video metadata và LICENSE). Các file nhị phân/placeholder được liệt kê riêng ở phần inventory thay vì tự diễn giải. Repository cũng có một DOCX ngoài markdown; web giữ nguyên liên kết tới DOCX đó thay vì tái dựng nội dung chưa có trong markdown.</p>
+    <div class="note"><b>Ký tự hiển thị:</b> một số nguồn GitHub hiện chứa ký tự riêng tư <code></code> tại vị trí đáng lẽ hiển thị dấu <code>≠</code>. Phần <b>Hiển thị đọc</b> đã chuẩn hóa thành <code>≠</code>; phần <b>Nguồn</b> vẫn giữ nguyên ký tự gốc để bảo toàn source.</div>
+    <article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>README.md</h3></div>
+      <div class="source-path">README.md</div>
+      <pre>Otako Theory Research is an independent experimental project exploring a proposed spatial model that describes constrained motion between nested physical spaces. This repository contains definitions, symbols, axioms, experimental observations, mathematical formulations, and ongoing verification. Community feedback and independent testing are welcome.
+Current Status
+
+This theory is currently under experimental development and has not yet been peer-reviewed or scientifically validated.
+</pre>
+    </article>
+    <article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>LICENSE.md</h3></div>
+      <div class="source-path">papers/LICENSE.md</div>
+      <pre># License &amp; Contribution Policy
+
+## Copyright Notice
+Copyright (c) 2026 Kiet (Protoveres). All Rights Reserved.
+
+---
+
+## 1. Terms of Use &amp; Copyright (Điều khoản sử dụng &amp; Bản quyền)
+- **Non-Commercial &amp; Protection:** All theory materials, formulas, symbols, and documentation under the **O-Ta-Ko Research Project** belong exclusively to the author, **Kiet (Protoveres)**.
+- **No Unauthorized Reproduction / Redistribution:** You are **NOT** permitted to copy, plagiarize, modify, sell, or claim ownership of any part of this project without explicit written permission from the author.
+- **Citation Required:** If you reference, quote, or discuss this work in external projects or publications, you must provide clear attribution and a link back to this original repository.
+
+---
+
+## 2. Community Contributions (Đóng góp &amp; Hỗ trợ)
+- **Feedback &amp; Discussions:** Community members are welcome to open **Issues** or start **Discussions** to give feedback, suggest improvements, report errors, or present theoretical ideas.
+- **Contributions:** If you wish to contribute code, proofs, or experimental data, please submit a **Pull Request (PR)**. All contributions will be reviewed by the author before merging.
+- **Support &amp; Collaboration:** You can support this research by starring the repository, sharing constructive feedback, or collaborating on experimental verification.
+
+---
+
+## 3. Recommended Citation
+If you cite this research draft, please use the following format:
+
+&gt; Kiet (Protoveres). *O-Ta-Ko Theory Research v0.1*. GitHub Repository, 2026.
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>O-ta-ko test ( 08 ).md</h3></div>
+      <div class="source-path">O-ta-ko test ( 08 ).md</div>
+      <pre># 🎥 Project Video Gallery
+
+* 🎞️ [Otako8]([[O-ta-ko(08 test)](https://youtu.be/P9xlITQeM_Q))]
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>02-distribution-symmetry-stability.md</h3></div>
+      <div class="source-path">papers/02-distribution-symmetry-stability.md</div>
+      <pre>Property III — Invariance of the 1–2–1 Distribution Rule
+Statement
+
+For any O-Ta, after partitioning into a 3 × 3 grid, every row and every column follows the dist
+
+1 – 2 – 1
+Distribution Rule
+
+The distribution is not determined by:
+
+Geometry
+Perimeter
+Area
+Size
+
+Nghĩa là: chỉ cần chia thành 3×3 thì quy luật xuất hiện, bất kể hình dạng, chu vi, diện tích hay kích thước.
+
+Property IV — Symmetry
+Statement
+
+If one column satisfies
+
+1 – 2 – 1
+
+then the opposite (mirror) column also satisfies
+
+1 – 2 – 1
+Example
+147 ↔ 148
+
+(always symmetric)
+
+Property V — Stability During Expansion
+Statement
+
+If O-Ta expands, then:
+
+the internal O-Ta does not lose its structure;
+O-Ta also appears externally;
+the two systems remain connected.
+
+Note: The author possesses the complete manuscript and seeks verification from the scientific community; one page will be posted daily.
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>O-Ta Occupancy Formulas in a 3×3 Grid.md</h3></div>
+      <div class="source-path">papers/O-Ta Occupancy Formulas in a 3×3 Grid.md</div>
+      <p style="margin:10px 0"><a class="btn" href="https://github.com/user-attachments/files/32052371/O-Ta-Ko_Theory_International.docx" target="_blank" rel="noopener">Mở O-Ta-Ko_Theory_International.docx</a></p>
+      <pre>[O-Ta-Ko_Theory_International.docx](https://github.com/user-attachments/files/32052371/O-Ta-Ko_Theory_International.docx)
+This formula is very important, so I can't publicly share it; instead, I invite everyone to download it and check it out for themselves.
+Rest assured—if it's a scam link, I'll fly to the moon. I swear it's not malicious.
+
+
+By the way, this version is quite large; I hope it doesn't lag when you open it.
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>O-Ta-Ko Theory — Axiom 6: Gravity (07).md</h3></div>
+      <div class="source-path">papers/O-Ta-Ko Theory — Axiom 6: Gravity (07).md</div>
+      <pre>O-Ta-Ko Theory — Axiom 6: Gravity
+
+Section II — O-Ta-Ko Expansion
+
+Axiom 6 — Gravity
+
+Within every gravitational environment:
+
+g
+
+=0
+
+An entity n subjected to gravity follows:
+
+n(d)⇒n∗a→b
+
+The trajectory from point a to point b is considered valid only when:
+
+g0
+
+When gravity is absent:
+
+g=0
+
+O-Ta-Ko has five possible cases:
+
+Case 1 — Trapped
+
+n is trapped
+
+Entity n cannot reach the terminal point.
+
+Case 2 — Inertial motion
+
+n→b
+
+Entity n continues toward b through its existing motion.
+
+Case 3 — Return
+
+n→starting point
+
+Entity n returns to its original position.
+
+Case 4 — Escape
+
+Entity n escapes from O-Ta-Ko:
+
+n→b→a
+
+or it may leave through both endpoints:
+
+n→aandn→b
+
+That is, n may exit through both a and b, or pass through b first and a afterward.
+
+Case 5 — Energy extinction
+
+Entity n loses all of its energy and disappears immediately within O-Ta.
+
+E
+n
+	​
+
+→0⇒n→∅
+Core distinction
+
+These cases describe what can happen to an entity when the gravitational constraint g
+
+=0 is absent. They are cases of Axiom 6, not separate axioms.
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>O-Ta-Ko Theory — Axiomatic Foundations | Part VI.md</h3></div>
+      <div class="source-path">papers/O-Ta-Ko Theory — Axiomatic Foundations | Part VI.md</div>
+      <pre>O-Ta-Ko Theory
+Part VII. Fundamental Axioms
+Axiom 1 — Unified Dual-Domain Structure
+
+The O-Ta-Ko System consists of two geometric domains, d and c, which are linked together as one unified structure.
+
+Binh and Chum are not independent structures; they are domains within the unified O-Ta-Ko structure.
+
+Axiom 2 — Dual-Terminal Structure
+
+The O-Ta-Ko System possesses exactly two endpoints: a and b.
+
+No third endpoint exists within the fundamental O-Ta-Ko structure.
+
+Axiom 3 — Fundamental Trajectory
+
+n(d) → n*a → b
+
+An entity belonging to Binh Domain d follows the fundamental relation from its interaction with Entry Point a toward Terminal Point b.
+
+Axiom 4 — Inaccessibility
+
+n(d) ⇒ n ∉⇒ c
+
+An entity n belonging to Binh Domain d is inaccessible to Chum Domain c in the absence of an external force.
+
+Axiom 5 — Dynamic Domain
+
+Chum Domain c exists, but it is not a path of traversal.
+
+c is a dynamic domain, rather than a route through which an entity can simply travel.
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>O-Ta-Ko Theory — Axioms 7–9: Size Limitation, Measurement Grid &amp; Excluded Region (08).md</h3></div>
+      <div class="source-path">papers/O-Ta-Ko Theory — Axioms 7–9: Size Limitation, Measurement Grid &amp; Excluded Region (08).md</div>
+      <pre>O-Ta-Ko Theory — Axiomatic Foundations
+Axioms 7–9
+Axiom 7 — Size Limitation
+
+If the size of n satisfies:
+
+n≥a
+
+then the object cannot enter a.
+
+Therefore:
+
+n∗a
+
+does not exist, and consequently:
+
+n is stuck
+	​
+
+
+Relation to Axiom 6:
+Axiom 7 belongs to Case 1 of Axiom 6.
+
+Axiom 8 — Measurement Grid
+
+A 3×3 square grid is used for measurement.
+
+The grid does not represent n and does not affect the O-Ta structure.
+
+Therefore, divisions from 1 to 9 are treated as reference frames.
+
+Axiom 9 — Excluded Region
+
+Parts measured outside the boundary curve are classified as an excluded region and are not counted.
+
+Let this excluded region be:
+
+S
+no
+	​
+
+
+Then the valid region is:
+
+S=S
+O−Ta
+	​
+
+	​
+
+
+Not:
+
+S=S
+O−Ta
+	​
+
++S
+no
+	​
+
+
+Therefore, quantities such as S, perimeter, length, and other measurements are evaluated only for the portion contained within O-Ta.
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>O-ta-ko ( 09 ).md</h3></div>
+      <div class="source-path">papers/O-ta-ko ( 09 ).md</div>
+      <pre>O-Ta-Ko Theory — Axiom 10:   The 1-2-1 Distribution Law
+
+Axiom 9 — The 1-2-1 Distribution Law
+
+The 1-2-1 Law is the distribution rule governing the internal structure of an O-Ta configuration.
+
+In a basic O-Ta structure, the distribution follows the pattern:
+
+1 → 2 → 1
+
+For example, when comparing the values arranged along the vertical structure:
+
+1 → 1
+4 → 2
+7 → 1
+
+the central section contains the greatest concentration, while the two outer sections contain smaller corresponding portions.
+
+The 1-2-1 Law describes the structural distribution, not merely the numerical value of an individual point.
+
+Even when the O-Ta structure is stretched, compressed, or otherwise scaled, the 1-2-1 distribution remains structurally unchanged as long as the configuration itself remains an O-Ta structure.
+
+Therefore, deformation may change the numerical values or scale of the configuration, but it does not by itself eliminate the 1-2-1 Law.
+
+Axiom 11: Recursion
+
+If the head shape is a new 10-Ta, then the entire set of rules is applied again.
+
+Example:
+
+Cell 5 contains the head shape.
+
+The head shape is then divided into a 3×3 structure.
+
+Therefore, the 1-2-1 Law is reapplied.
+
+Head shape→3×3→reapply the 1-2-1 Law
+	​
+
+O-Ta-Ko Theory — Axiom 11: Deformation
+
+Axiom 12: Deformation
+
+If an O-Ta is only stretched or deformed, then the 1-2-1 Law does not change.
+
+Only the values change.
+
+Model Boundary
+
+However, if the O-Ta becomes concave, cut, or otherwise structurally broken, it is no longer an O-Ta.
+
+Stretching / deformation→1-2-1 Law unchanged
+	​
+
+Only the values change
+	​
+
+Concave / cut / structural break→outside the O-Ta model
+	​
+
+
+Model boundary: once the structure is concave, cut, or otherwise broken, it is no longer considered O-Ta.
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>O-ta-ko 12 .md</h3></div>
+      <div class="source-path">papers/O-ta-ko 12 .md</div>
+      <pre>Formula 4: Total Area
+
+if S = S1 + S2 + ... S...
+
+then only + the part belonging to O-Ta
+
+the shaded part outside O-Ta is not counted
+
+Formula 5: Nested System
+
+if o2 is inside O1
+the Chum Domain changes correspondingly
+then: [ a1 &gt; a2 ]
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>Otako law-(10).md</h3></div>
+      <div class="source-path">papers/Otako law-(10).md</div>
+      <pre>Axiom 13 — Nesting (Calculation)
+
+If O-Ta 2 is placed into O-Ta 1, then the two O-Ta structures have a relationship and are subsequently combined.
+
+The error is calculated; when the structures are combined, the resulting error must also be calculated, ensuring that the rule is not violated.
+
+(For now, there is no specific rule.)
+
+Axiom 14 — Inescapability
+
+If an O-Ta exists without external force, an external agent, or a very large change, then every object remains constrained.
+
+n(d)⇒n∗a→b
+
+(Cannot reach the path within the Chum.)
+
+Axiom 15 — External Force
+
+If an external force appears:
+
+Examples: pushing force, pulling force, attractive force, a human, or a machine.
+
+Then the O-Ta law is affected, and those affected objects are no longer O-Ta.
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>The 11 Law of Otako: 2D Spatial Area Formula.md</h3></div>
+      <div class="source-path">papers/The 11 Law of Otako: 2D Spatial Area Formula.md</div>
+      <pre>Otako Theorem: O-Ta Measurement System (International Version)
+
+Formula 1: 2D Calculation of (O)
+Observe O-Ta from a top-down view. O-Ta is bounded within a 3×3 square grid.
+
+Grid-cell arrangement (Rows/Columns):
+
+1	2	3
+4	5	6
+7	8	9
+
+Formula 2: Distribution Law
+Each row or column follows a 1–2–1 structural ratio.
+
+The 1–2–1 ratio is a geometric rule, not an arithmetic operation.
+
+Example: analysis of Column 1 (Cells 1, 4, and 7):
+
+Cell 1: approximately 1/2 part
+Cell 4: approximately 2 parts (about 1.9)
+Cell 7: approximately 1/2 part
+
+Formula 3: Area Measurement (S
+i
+	​
+
+)
+Let S
+i
+	​
+
+ denote the area of O contained within cell i.
+
+Therefore, for Cells 1, 4, and 7:
+
+S
+1
+	​
+
+:S
+4
+	​
+
+:S
+7
+	​
+
+≈1:2:1
+
+Note: This is the idealized ratio in the conceptual model; in practice, it is only an approximation.
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>The O-Ta-Ko Simplified Model.md</h3></div>
+      <div class="source-path">papers/The O-Ta-Ko Simplified Model.md</div>
+      <pre># O-Ta-Ko Simplified Model
+
+The **O-Ta-Ko Simplified Model** is a simplified geometric representation of the original O-Ta-Ko structure.
+
+The purpose of this model is to make the structure easier to construct, visualize, measure, and study using basic geometric methods.
+
+The simplified model is intended as a **supporting model** and does not replace the original O-Ta-Ko structure.
+
+## 1. Basic Structure
+
+The simplified model consists of two main parts:
+
+- **Chum** — represented by a square block.
+- **Bình** — represented by a hollow circular cylindrical structure located in the central part of the Chum.
+
+This simplified representation replaces part of the more complex geometry of the original O-Ta-Ko structure with basic geometric shapes.
+
+## 2. Standard Geometric Formulas
+
+The simplified model can be examined using standard formulas from elementary geometry.
+
+For example, the area of a square with side length `a` is:
+
+$$
+S = a^2
+$$
+
+The circumference of a circle with radius `r` is:
+
+$$
+C = 2\pi r
+$$
+
+The area of a circle with radius `r` is:
+
+$$
+S = \pi r^2
+$$
+
+The volume of a cylinder with radius `r` and height `h` is:
+
+$$
+V = \pi r^2 h
+$$
+
+These are **standard geometric formulas**. They are used only as examples for calculations involving the simplified model and are not newly derived formulas of O-Ta-Ko.
+
+## 3. Why Use a Simplified Model?
+
+The simplified model makes the structure easier to work with because basic geometric shapes can be constructed and measured more easily.
+
+It can be useful for:
+
+- simple geometric calculations;
+- physical model construction;
+- visualization;
+- measurements and experiments;
+- explaining the general structure of O-Ta-Ko.
+
+The simplified model therefore provides a practical way to study some geometric aspects of O-Ta-Ko without reproducing the full complexity of the original structure.
+
+## 4. Main Limitation
+
+The main limitation of the simplified model is its treatment of the connection between **Chum** and **Bình**.
+
+In the original O-Ta-Ko structure, this connection contains a **smooth and continuous curved transition**.
+
+The simplified model replaces this curved transition with simpler geometric forms. Because of this simplification, the connection may contain a **sharp transition, such as a 90° corner**, instead of the smooth curvature of the original structure.
+
+This means that the simplified model is easier to construct and calculate, but it does not completely preserve the geometric continuity of the original O-Ta-Ko structure.
+
+## 5. Original Model vs. Simplified Model
+
+| Feature | Original O-Ta-Ko Model | Simplified Model |
+|---|---|---|
+| Geometry | More complex curved structure | Basic geometric shapes |
+| Connection | Smooth and continuous | Simplified transition |
+| Calculation | More difficult | Easier |
+| Construction | More difficult | Easier |
+| Measurement | More complex | Easier |
+| Role | Primary model | Supporting model |
+
+## Conclusion
+
+The **O-Ta-Ko Simplified Model** provides a simpler geometric representation of the original O-Ta-Ko structure.
+
+It allows standard elementary-geometry formulas to be used for basic calculations and makes physical construction, measurement, and visualization easier.
+
+However, the simplification also removes part of the smooth curved transition present in the original structure.
+
+Therefore, the simplified model should be considered a **supporting model for O-Ta-Ko**, while the **original O-Ta-Ko structure remains the primary model**.
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>Warning.md</h3></div>
+      <div class="source-path">papers/Warning.md</div>
+      <pre>Author: Nguyễn Tuấn Kiệt
+Date of online launch: Late June
+Date of conception: Late May
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>otako (03 )-property-06-infinite-nesting.md</h3></div>
+      <div class="source-path">papers/otako (03 )-property-06-infinite-nesting.md</div>
+      <pre># O-Ta Theory — Property 6: Infinite Nesting
+
+If the O-Ta nesting process continues indefinitely, the laws governing
+the O-Ta system remain unchanged.
+
+Only the representative value C changes according to the nesting level.
+
+Therefore, infinite nesting does not create a new governing law at every
+level. The O-Ta principle continues to operate regardless of the depth
+of nesting.
+
+---
+
+## 2. Representative-Value Sequence
+
+For successive O-Ta levels, the representative values follow a strictly
+decreasing order:
+
+a₁ &gt; a₂ &gt; a₃ &gt; ...
+
+Equivalently:
+
+aₙ₊₁ &lt; aₙ
+
+This describes the change in the representative value as the nesting
+process continues.
+
+---
+
+## 3. Two-Level O-Ta Structure
+
+Consider two O-Ta structures:
+
+B¹ and B².
+
+B² is nested inside B¹.
+
+When B² is nested into B¹, the bottom of B² does not completely reach
+the corresponding position of B¹.
+
+Instead, the bottom of B² is displaced by one interval relative to the
+previous position.
+
+---
+
+## 4. Recursive Nesting
+
+The displacement created by one O-Ta nesting becomes the stopping
+position for the next O-Ta.
+
+The process can therefore continue:
+
+B¹ → B² → B³ → B⁴ → ...
+
+The same O-Ta rule continues to be applied at each successive level.
+
+---
+
+## 5. Infinite Continuation
+
+When the O-Ta nesting process continues without limit:
+
+B¹ → B² → B³ → ...
+
+the governing O-Ta laws remain unchanged.
+
+The representative values continue to follow:
+
+a₁ &gt; a₂ &gt; a₃ &gt; ...
+
+while C changes according to the nesting level.
+
+---
+
+## 6. Nesting-Offset Principle
+
+At each nesting operation, the bottom of the next O-Ta is displaced by
+one additional interval relative to the preceding O-Ta.
+
+This displacement becomes the stopping position for the next nesting
+operation.
+
+The process is therefore repeated from one nesting level to the next.
+
+---
+
+## 7. Infinite O-Ta Nesting
+
+Let the nesting continue indefinitely:
+
+B¹ ⊃ B² ⊃ B³ ⊃ ... ⊃ Bⁿ ⊃ ...
+
+The corresponding representative values satisfy:
+
+a₁ &gt; a₂ &gt; a₃ &gt; ... &gt; aₙ &gt; ...
+
+The governing O-Ta law remains unchanged throughout the nesting process.
+
+---
+
+## 8. Summary
+
+Property 6 establishes:
+
+1. O-Ta nesting can continue indefinitely.
+2. The governing O-Ta laws remain unchanged.
+3. The representative value C changes according to the nesting level.
+4. The representative values follow a strictly decreasing order:
+
+   a₁ &gt; a₂ &gt; a₃ &gt; ...
+
+5. The bottom of the next O-Ta is displaced by one additional interval.
+6. This displacement becomes the stopping position for the following
+   O-Ta.
+7. The nesting process can therefore continue recursively:
+
+   B¹ → B² → B³ → ...
+
+---
+
+**Previous:** Property 5 — Stability
+
+**Current:** Property 6 — Infinite Nesting
+
+**Next:** Property 7 — To be added from the original formulation
+
+While I'm at it, let me also provide some further explanation:For successive O-Ta levels, the representative values follow a strictly decreasing order:
+
+a
+1
+	​
+
+&gt;a
+2
+	​
+
+&gt;a
+3
+	​
+
+&gt;⋯
+
+Here, a
+ n
+	​
+
+ denotes the representative value at nesting level n.
+In other words, each successive nesting level has a smaller representative value than the preceding level.
+
+Equivalently:
+
+a
+ n+1
+	​
+
+&lt;a
+ n
+	​
+
+
+This means that the representative value at the next nesting level is smaller than the value at the current level.
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>otako (04)-property-07-measurement-system.md</h3></div>
+      <div class="source-path">papers/otako (04)-property-07-measurement-system.md</div>
+      <pre>Property 7 — Independence from the Measurement System
+
+The O-Ta laws are independent of the measurement system used to describe a quantity.
+
+If the measurement unit is changed, the numerical value representing the quantity changes, but the governing O-Ta laws remain unchanged.
+
+For example, a length may be represented using:
+
+millimeters (mm)
+centimeters (cm)
+meters (m)
+kilometers (km)
+and so on.
+
+Changing the unit changes only the numerical representation of the quantity.
+
+The underlying O-Ta laws do not change.
+
+Changing the measurement unit changes the numerical value, not the governing law.
+
+Therefore, the O-Ta system remains mathematically consistent regardless of the valid measurement unit used to represent its quantities.
+
+Property 8 — Geometric Conditions of the Object
+
+O-Ta formulas that depend on geometric quantities are applied according to the geometric structure of the object being considered.
+
+Depending on the formula, the relevant geometric quantities may include:
+
+diameter
+radius
+circumference
+area
+length
+width
+or other equivalent geometric quantities defined within the O-Ta model.
+
+These quantities describe the geometric properties that are relevant to a particular O-Ta calculation.
+
+Irregular Objects
+
+Objects do not necessarily have regular geometric shapes.
+
+Examples include:
+
+naturally formed rocks
+irregular pieces of soil
+deformed masses
+other naturally irregular objects.
+
+For such objects, certain geometric quantities may not have a unique or directly measurable value.
+
+For example, an irregular rock may not have a single well-defined diameter or radius.
+
+In such cases, a geometric O-Ta formula that specifically requires such a quantity cannot be directly evaluated using that undefined parameter.
+
+However, this does not mean that the object is outside the O-Ta system.
+
+The object remains subject to the governing O-Ta laws.
+
+Its irregular shape does not create an exception to those laws.
+
+The limitation applies only to the specific geometric representation required by a particular formula.
+
+Core Principle
+
+Irregular geometry does not exempt an object from the O-Ta laws. It only limits the direct application of geometric formulas whose required geometric quantities cannot be uniquely defined.
+
+Thus:
+
+Irregular object → certain geometric quantities may be undefined → the corresponding geometric formula cannot be directly evaluated → the O-Ta laws themselves remain unchanged and continue to apply.
+
+Relationship to the O-Ta System
+
+Property 8 therefore concerns the geometric applicability of individual formulas, not the validity of the O-Ta system itself.
+
+An object may have an irregular shape and still remain completely governed by O-Ta.
+
+The O-Ta laws do not require every object to have a simple or ideal geometric form.
+
+Only the formulas that explicitly depend on a particular geometric quantity require that quantity to be defined.
+
+No reduction of O-Ta's governing role occurs because of geometric irregularity.
+
+Summary
+
+Property 7 — Independence from the Measurement System
+
+Changing the measurement unit changes the numerical representation of a quantity, but does not change the O-Ta laws.
+
+Property 8 — Geometric Conditions of the Object
+
+Geometric O-Ta formulas depend on the geometric quantities required by those formulas. Irregular objects may lack uniquely defined geometric quantities, preventing direct evaluation of a particular formula. Nevertheless, the objects remain fully within the O-Ta system and remain subject to its governing laws.
+
+Warning: Content requires verification.
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>otako (05)-o-ta-laws.md</h3></div>
+      <div class="source-path">papers/otako (05)-o-ta-laws.md</div>
+      <pre>O-Ta LAWS
+
+Law I: (First-Direction Law)
+
+Compact form:
+| n(d) =&gt; n * a → b |
+
+Full form:
+| n(d) =&gt; n * a → n * b |
+
+Law II: Inaccessibility
+
+n(d) ∉ → c
+
+Law III: Infinite Doubling Law
+
+If multiple O-Ta structures are joined together,
+there will be 1 chum that cannot be entered.
+
+Law IV: Structural Conservation
+(stability)
+
+- small
+- nested
+- connected
+- expanded
+- enlarged
+
+→ does not eliminate Laws I and II
+
+Law V: External Force
+
+When an external object intervenes,
+the system will no longer be completely constrained by O-Ta.
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>otako-theory-v0.1.md</h3></div>
+      <div class="source-path">papers/otako-theory-v0.1.md</div>
+      <pre>O-Ta-Ko Theory
+
+Part I. Fundamental Symbols
+
+Symbol	Definition
+
+O	O-Ta-Ko System
+
+d	Binh Domain
+
+c	Chum Domain
+
+a	Binh Entry Point
+
+b	Binh Terminal Point
+
+n	Entity / Object
+
+Part II. Logical Operators
+
+Symbol	Meaning
+
+→	Move Toward
+
+⇒	Implies
+
+∉⇒	Inaccessible To
+
+*	Traverse Through
+
+Part III.
+ 
+ Measurement Symbols
+
+Symbol	Definition
+
+□	Unit Cell
+
+□₁	Cell No.1
+
+T	Remaining O-Ta Region
+
+T₁	Remaining O-Ta Region inside Cell No.1
+
+Part IV. Relational Operators
+
+Membership
+
+Notation:
+
+n(d)
+
+Definition:
+
+Entity n belongs to Binh Domain d.
+
+General Form:
+
+Entity(Domain)
+
+Examples:
+
+a(d)
+
+→ Entry Point a belongs to Binh Domain.
+
+n(d)
+
+→ Entity n belongs to Binh Domain.
+
+n(c)
+
+→ Entity n belongs to Chum Domain.
+
+Traversal
+
+Notation:
+
+n∗d
+
+Definition:
+
+Entity n traverses Domain d.
+
+Part V.
+
+Fundamental Equation
+
+n(d)⇒n∗a→b
+
+Definition:
+
+If entity n belongs to Binh Domain, then its valid trajectory is constrained from the Binh Entry Point toward the Binh Terminal Point.
+
+Part VI. Fundamental Theorem
+
+n(d)⇒n∉⇒c
+
+Definition:
+
+Any entity existing inside the Binh Domain is fundamentally inaccessible to the Chum Domain.
+
+Terminology Note
+
+The terms Binh and Chum are proper nouns defined exclusively within the O-Ta-Ko Theory.
+
+They do not refer to ordinary physical containers (such as bottles or jars) and must not be translated in academic or technical 
+
+Author: Kiet
+
+Location: Vietnam
+
+Status: 99.98% complete; awaiting verification and validation by the scientific community.
+
+This is the first article; there are others, but they are not yet ready for publication, and I require support from the community.
+
+Editing rights: Reserved by the author.
+
+Anyone wishing to contribute is welcome to reply; however, please do not delete or disrupt this "O-ta-ko" version.
+
+-Link : "  https://github.com/Protoveres1secon/Otako-Theory-Research/blob/main/papers/02-distribution-symmetry-stability.md            "
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>README.txt</h3></div>
+      <div class="source-path">README.txt</div>
+      <pre>PROTO­VERES — CHAT NOTIFICATIONS + VIDEO
+
+Base: Protoveres_Auth_Session_FINAL_FULL_CHAT_AUDITED_REPAIRED
+
+Bổ sung nhỏ trên hệ thống chat đang hoạt động:
+- Thông báo tin nhắn mới theo từng người gửi.
+- Thông báo cho text, ảnh, GIF và video.
+- Nút "Đến đoạn chat" mở đúng cuộc trò chuyện.
+- Có badge NEW cho thông báo chưa đọc.
+- Gửi video từ máy tính hoặc điện thoại.
+- Nút Video trên điện thoại dùng camera capture nếu trình duyệt hỗ trợ.
+- Video lưu ở Firebase Storage, metadata tin nhắn lưu Firestore.
+- Không thay đổi cấu trúc Trang chủ/Login/Tài khoản/Community cũ.
+
+FIREBASE RULES:
+1) Firestore → Rules: publish firestore.rules trong gói này.
+2) Storage → Rules: publish storage.rules trong gói này.
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>Mixed text  09 ( otako ).md</h3></div>
+      <div class="source-path">video/Mixed text  09 ( otako ).md</div>
+      <pre># 🎥 Project Video Gallery
+
+* 🎞️ [O-ta-ko test  09  - (https://youtu.be/GvL-JqWb4VI)
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>O-ta-ko fules to......... ( 04 ).md</h3></div>
+      <div class="source-path">video/O-ta-ko fules to......... ( 04 ).md</div>
+      <pre># 🎥 Project Video Gallery
+
+* 🎞️ [Otako1]([[O-ta-ko(04 test)](https://youtu.be/fqTKOtFHQcA)]
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>O-ta-ko tesst (05).md</h3></div>
+      <div class="source-path">video/O-ta-ko tesst (05).md</div>
+      <pre># 🎥 Project Video Gallery
+
+* 🎞️ [Otako1]([[O-ta-ko(04 test)](https://youtu.be/FW390x7OzIA)]
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>O-ta-ko test ( 06 ).md</h3></div>
+      <div class="source-path">video/O-ta-ko test ( 06 ).md</div>
+      <pre># 🎥 Project Video Gallery
+
+* 🎞️ [Otako1]([[O-ta-ko(06 test)](https://youtu.be/CvP4CUDl2yI)]
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>O-ta-ko test ( 07 ).md</h3></div>
+      <div class="source-path">video/O-ta-ko test ( 07 ).md</div>
+      <pre># 🎥 Project Video Gallery
+
+* 🎞️ [Otako test]([[O-ta-ko(07 test)](https://youtu.be/Av-AzIeDJS0))]
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>Otako text big and small ( 10 ).md</h3></div>
+      <div class="source-path">video/Otako text big and small ( 10 ).md</div>
+      <pre># 🎥 Project Video Gallery
+
+* 🎞️ [Otako10]([[O-ta-ko(10 test)](https://youtu.be/93jqdv3br_I))]
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>Testing fuels to evaluate the Otako theory.md</h3></div>
+      <div class="source-path">video/Testing fuels to evaluate the Otako theory.md</div>
+      <pre>
+
+
+# 🎥 Project Video Gallery
+* 🎞️ [Otako1]([[O-ta-ko(01 test)](https://youtu.be/viokd33SSUA)]
+
+
+
+
+
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>Testing fuels... the Otako ( 03 ).md</h3></div>
+      <div class="source-path">video/Testing fuels... the Otako ( 03 ).md</div>
+      <pre># 🎥 Project Video Gallery
+
+* 🎞️ [O-ta-ko test  03  - (https://youtu.be/5H8BaU1KG_I)
+</pre>
+    </article><article class="doc-card">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>testing fuels to ecaluate the O-ta-ko ( 02 ).md</h3></div>
+      <div class="source-path">video/testing fuels to ecaluate the O-ta-ko ( 02 ).md</div>
+      <pre># 🎥 Project Video Gallery
+
+
+* 🎞️ [Watch Video 2 - Introduction](https://youtu.be/M3tkTzK3g1c)
+
+</pre>
+    </article>
+  </div>
+</section>
+
+<section class="section"><h2>12. Repository Extras / Notes</h2>
+  <div class="panel">
+    <p><strong>README.txt</strong> is a Protoveres chat-notification/video implementation note rather than an O-Ta-Ko theory document. It is preserved in the source index because it is present in the repository.</p>
+    <article class="doc-card" id="doc-README-txt">
+      <div class="doc-head"><span class="badge">SOURCE</span><h3>README.txt</h3></div>
+      <div class="source-path">README.txt</div>
+      <pre>PROTO­VERES — CHAT NOTIFICATIONS + VIDEO
+
+Base: Protoveres_Auth_Session_FINAL_FULL_CHAT_AUDITED_REPAIRED
+
+Bổ sung nhỏ trên hệ thống chat đang hoạt động:
+- Thông báo tin nhắn mới theo từng người gửi.
+- Thông báo cho text, ảnh, GIF và video.
+- Nút "Đến đoạn chat" mở đúng cuộc trò chuyện.
+- Có badge NEW cho thông báo chưa đọc.
+- Gửi video từ máy tính hoặc điện thoại.
+- Nút Video trên điện thoại dùng camera capture nếu trình duyệt hỗ trợ.
+- Video lưu ở Firebase Storage, metadata tin nhắn lưu Firestore.
+- Không thay đổi cấu trúc Trang chủ/Login/Tài khoản/Community cũ.
+
+FIREBASE RULES:
+1) Firestore → Rules: publish firestore.rules trong gói này.
+2) Storage → Rules: publish storage.rules trong gói này.
+</pre>
+    </article>
+    <div class="panel" style="margin-top:14px">
+      <h3 style="margin-top:0">Repository inventory — đối chiếu với <code>main</code></h3>
+      <p class="muted">Đây là inventory của các nhóm file ngoài phần lý thuyết hiển thị chính; không gán ý nghĩa mới cho file chưa có nội dung đọc được.</p>
+      <table class="doc-table"><thead><tr><th>Nhóm</th><th>Đối chiếu hiện tại</th></tr></thead><tbody>
+        <tr><td>Text sources</td><td>README.md, README.txt, O-ta-ko test (08), 16 files trong <code>papers/</code> (bao gồm LICENSE.md), 9 files trong <code>video/</code></td></tr>
+        <tr><td>Images</td><td><code>Image Otako law/dfbnfebb.png</code>, <code>Image Otako law/width_460.png</code></td></tr>
+        <tr><td>Auxiliary / placeholder / binary</td><td><code>IX</code>, root <code>X</code>, <code>f</code>, <code>fs</code>, <code>errol</code>, <code>errol.md</code>, <code>index.html</code>, <code>firestore.rules</code>, <code>storage.rules</code>, <code>Image Otako law/X</code></td></tr>
+        <tr><td>External document</td><td><code>O-Ta-Ko_Theory_International.docx</code> — được giữ dưới dạng link trong <code>O-Ta Occupancy Formulas in a 3×3 Grid.md</code></td></tr>
+      </tbody></table>
+    </div>
+    <p class="muted">Các file auxiliary/binary/placeholder ở trên không bị diễn giải như nội dung lý thuyết. Điều này khác với việc bỏ sót chúng: chúng đã được ghi nhận trong inventory.</p>
+    <p><a href="https://github.com/Protoveres1secon/Otako-Theory-Research/tree/main" target="_blank">Open the live GitHub repository</a></p>
+  </div>
+</section>
+
+<footer>
+  <div><strong>O-Ta-Ko Research — Complete Web Snapshot v5 Mobile Safe</strong></div>
+  <div>Source basis: public GitHub repository main branch (text sources mirrored; binary/placeholder artifacts inventoried), plus the O-Ta-Ko 5,040-XS calculator module. Mobile-safe calculator build avoids BigInt syntax for compatibility with embedded WebViews.</div>
+  <div>Generated as a source-preserving research interface; no scientific validation is implied by this web page.</div>
+</footer>
+</div>
+
+<script>
+(function(){
+  const VIDEO_LABEL='Load video';
+  document.querySelectorAll('.lazy-video').forEach(card=>{
+    const load=()=>{
+      if(card.classList.contains('loaded')) return;
+      const id=card.dataset.videoId, title=card.dataset.videoTitle;
+      const iframe=document.createElement('iframe');
+      iframe.loading='lazy';
+      iframe.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(id);
+      iframe.title=title;
+      iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen=true;
+      card.querySelector('.video-thumb').replaceWith(iframe);
+      card.classList.add('loaded');
+    };
+    card.querySelector('.video-thumb').addEventListener('click',load);
+    card.querySelector('.video-thumb').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();load();}});
+  });
+
+
+  // Readable document renderer: improves headings, bullets, tables, formulas, links and broken glyphs
+  // in the human-facing view without changing the raw Source Index; the raw source remains intentionally untouched.
+  function escapeHtmlText(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+  function inlineFmt(s){
+    let t=escapeHtmlText(s);
+    t=t.replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>');
+    t=t.replace(/`([^`]+)`/g,'<code>$1</code>');
+    t=t.replace(/(https?:\/\/[^\s<]+)/g,'<a href="$1" target="_blank" rel="noopener">$1</a>');
+    return t;
+  }
+  function looksMath(s){
+    const t=s.replace(/\s+/g,' ').trim();
+    return /^(n\(|a\d|a₁|aₙ|B¹|B²|Bⁿ|S\d|S\s*=|E[_ₙ]|g\s*[≠=]|[0-9]+\s*(→|↔|⊃|\:)|.*(⇒|∉⇒|≈|→|↔|⊃).*)$/.test(t) || /\b[A-Za-z](_[0-9₁₂ₙ]+)?\s*[=:≈≠<>]/.test(t);
+  }
+  function renderReadableDocs(){
+    document.querySelectorAll('.doc-body').forEach(el=>{
+      if(el.dataset.rendered==='1') return;
+      el.dataset.rendered='1';
+      const raw=el.textContent.replace(/\r\n?/g,'\n').replace(//g,'≠');
+      const lines=raw.split('\n');
+      const frag=document.createDocumentFragment();
+      let list=null, tableRows=[];
+      const flushList=()=>{if(list){frag.appendChild(list);list=null;}};
+      const flushTable=()=>{
+        if(!tableRows.length) return;
+        const table=document.createElement('table'); table.className='doc-table';
+        tableRows.forEach((row,ri)=>{
+          const tr=document.createElement('tr');
+          row.split('|').slice(1,-1).forEach(cell=>{const tag=ri===0?'th':'td';const td=document.createElement(tag);td.innerHTML=inlineFmt(cell.trim());tr.appendChild(td)});
+          table.appendChild(tr);
+        });
+        frag.appendChild(table);tableRows=[];
+      };
+      let inMath=false, mathBuf=[];
+      const flushMath=()=>{if(!mathBuf.length)return;const d=document.createElement('div');d.className='mathline';d.textContent=mathBuf.join('\n').replace(//g,'≠');frag.appendChild(d);mathBuf=[];};
+      for(let rawLine of lines){
+        const line=rawLine.replace(/\t+/g,'    '); const t=line.trim();
+        if(t==='$$'){flushList();flushTable();inMath=!inMath;if(!inMath)flushMath();continue;}
+        if(inMath){mathBuf.push(t);continue;}
+        if(/^\s*\|.*\|\s*$/.test(line)){
+          flushList();
+          if(/^\s*\|\s*-{2,}/.test(line)) continue;
+          tableRows.push(line.trim()); continue;
+        } else flushTable();
+        if(!t){flushList();continue;}
+        if(/^---+$/.test(t)){flushList();const hr=document.createElement('div');hr.className='source-rule';frag.appendChild(hr);continue;}
+        const hm=t.match(/^(#{1,6})\s+(.+)$/);
+        if(hm){flushList();const h=document.createElement(hm[1].length<=2?'h4':hm[1].length===3?'h5':'h6');h.innerHTML=inlineFmt(hm[2]);frag.appendChild(h);continue;}
+        const bm=t.match(/^[-*]\s+(.+)$/);
+        if(bm){if(!list){list=document.createElement('ul')}const li=document.createElement('li');li.innerHTML=inlineFmt(bm[1]);list.appendChild(li);continue;}
+        flushList();
+        if(looksMath(t)){const d=document.createElement('div');d.className='mathline';d.innerHTML=inlineFmt(t);frag.appendChild(d);}
+        else {const p=document.createElement('p');p.innerHTML=inlineFmt(t);frag.appendChild(p);}
+      }
+      flushMath();flushList();flushTable();
+      el.replaceChildren(frag);
+    });
+  }
+  renderReadableDocs();
+
+  // Calculator — mobile-safe exact-rational engine.
+  // Uses ordinary Number integers (all values in this model remain far below the exact-integer limit),
+  // avoiding BigInt syntax so embedded/mobile WebViews can parse and run the page.
+  var BASES={6:[6,3,2,15,12,42,48],2:[2,6,8,10,12,14,16]};
+  var MAPS={
+    6:[['1','6',''],['2','3',''],['3','2',''],['4','1.5',''],['5','1.2',''],['6','1','Loại'],['7','42',''],['8','48','']],
+    2:[['1','2',''],['2','1','Loại'],['3','6',''],['4','8',''],['5','10',''],['6','12',''],['7','14',''],['8','16','']]
+  };
+  var FORMULAS={6:'6, 3, 2, 15, 12, 42, 48',2:'2, 6, 8, 10, 12, 14, 16'};
+  var active=6, currentCase=1;
+  var permsCache={}, auditCache={};
+  function $(s){return document.querySelector(s)}
+  function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+  function abs(n){return n<0?-n:n}
+  function gcd(a,b){a=Math.abs(Math.trunc(a));b=Math.abs(Math.trunc(b));while(b!==0){var t=a%b;a=b;b=t}return a||1}
+  function norm(n,d){
+    if(d===0)throw new Error('Mẫu bằng 0');
+    if(d<0){n=-n;d=-d}
+    var g=gcd(n,d);return {n:n/g,d:d/g}
+  }
+  function rat(n,d){return norm(n,d===undefined?1:d)}
+  function mul(a,b){return norm(a.n*b.n,a.d*b.d)}
+  function divq(a,b){if(b.n===0)throw new Error('Chia cho 0');return norm(a.n*b.d,a.d*b.n)}
+  function cmp(a,b){var v=a.n*b.d-b.n*a.d;return v<0?-1:v>0?1:0}
+  function strRat(r){return r.d===1?String(r.n):String(r.n)+'/'+String(r.d)}
+  function finiteDecimal(r){
+    var d=Math.abs(r.d),c2=0,c5=0;
+    while(d%2===0){d/=2;c2++}
+    while(d%5===0){d/=5;c5++}
+    if(d!==1)return null;
+    var k=Math.max(c2,c5),scale=1,i,s,neg,scaled;
+    for(i=0;i<k;i++)scale*=10;
+    scaled=Math.trunc(r.n*scale/r.d);
+    neg=scaled<0;s=String(Math.abs(scaled));
+    while(s.length<k+1)s='0'+s;
+    if(k===0)return (neg?'-':'')+s;
+    return (neg?'-':'')+s.slice(0,-k)+'.'+s.slice(-k);
+  }
+  function integerTrace(n){
+    var lines=[],cur=n;
+    if(n===0)return {state:0,lines:['0 → loại']};
+    if(n===1)return {state:1,lines:['1 → dừng']};
+    if(n===-1)return {state:-1,lines:['-1 → dừng']};
+    lines.push(String(cur));
+    for(var guard=0;guard<10000;guard++){
+      if(cur===1||cur===-1||cur===0)break;
+      if(cur%2===0)cur/=2;
+      else cur+=1;
+      lines.push(String(cur));
+    }
+    return {state:cur,lines:lines}
+  }
+  function fractionTrace(r){
+    var tn=integerTrace(r.n),td=integerTrace(r.d);
+    var state=(tn.state===1&&td.state===1)?1:(tn.state===-1&&td.state===1?-1:1);
+    return {state:state,lines:[strRat(r)+' → xử lý tử:',tn.lines.map(function(x){return '  '+x}).join('\n'),'mẫu '+r.d+' → xử lý mẫu:',td.lines.map(function(x){return '  '+x}).join('\n'),'→ kết quả nhánh: '+state]}
+  }
+  function finalize(r){
+    var lines=['Giá trị cuối trước trạng thái: '+strRat(r)];
+    if(r.d===1){var t=integerTrace(r.n);return {state:t.state,lines:lines.concat(['Số nguyên '+r.n+':'],t.lines),kind:'integer'}}
+    var dec=finiteDecimal(r);
+    if(dec!==null){
+      var clean=dec.replace('-','').replace('.','');
+      var t2=integerTrace((dec.charAt(0)==='-'?-1:1)*Number(clean));
+      return {state:t2.state,lines:lines.concat(['Thập phân hữu hạn: '+dec,'Xóa dấu phẩy → '+clean],t2.lines),kind:'finite'}
+    }
+    var f=fractionTrace(r);
+    return {state:f.state,lines:lines.concat(['Thập phân tuần hoàn → giữ chính xác dưới dạng phân số '+strRat(r)],f.lines),kind:'repeating'}
+  }
+  function groupTrace(group){
+    var cur=rat(Number(group[0])),lines=['Bắt đầu: '+group.join(', ')];
+    for(var i=1;i<group.length;i++){
+      var nxt=rat(Number(group[i])),c=cmp(nxt,cur),op=c<=0?'÷':'×',res=c<=0?divq(cur,nxt):mul(cur,nxt);
+      lines.push(strRat(cur)+' '+op+' '+strRat(nxt)+' = '+strRat(res));cur=res;
+    }
+    var fin=finalize(cur);return {state:fin.state,lines:lines.concat(fin.lines),kind:fin.kind}
+  }
+  function groupState(group){
+    var cur=rat(Number(group[0]));
+    for(var i=1;i<group.length;i++){var nxt=rat(Number(group[i]));cur=cmp(nxt,cur)<=0?divq(cur,nxt):mul(cur,nxt)}
+    return finalize(cur).state
+  }
+  function permutations(arr){
+    var a=arr.slice(),out=[];
+    function rec(k){
+      if(k===a.length){out.push(a.slice());return}
+      for(var i=k;i<a.length;i++){var t=a[k];a[k]=a[i];a[i]=t;rec(k+1);t=a[k];a[k]=a[i];a[i]=t}
+    }
+    rec(0);return out
+  }
+  function allPerms(fn){if(!permsCache[fn])permsCache[fn]=permutations(BASES[fn]);return permsCache[fn]}
+  function evalSummary(p){return [groupState(p.slice(0,3)),groupState(p.slice(3,5)),groupState(p.slice(5,7))]}
+
+  function updateInfo(){
+    var rows=MAPS[active].map(function(r){return '<tr><td>'+r[0]+'</td><td>'+r[1]+'</td><td class="'+(r[2]?'remove':'')+'">'+(r[2]||'')+'</td></tr>'}).join('');
+    $('#calcFunctionInfo').innerHTML='<div class="mapping-grid"><div class="map-card"><b>Hàm '+active+'</b><span>Số cố định: <strong>'+active+'</strong></span></div><div class="map-card"><b>Bộ 7 giá trị XS</b><span class="baseCode">'+FORMULAS[active]+'</span></div><div class="map-card"><b>Không gian XS</b><span>7! = <strong>5.040</strong></span></div></div><table class="mapping-table"><thead><tr><th>n</th><th>Giá trị hàm</th><th>Ghi chú</th></tr></thead><tbody>'+rows+'</tbody></table>';
+  }
+  function setTabs(){var bs=document.querySelectorAll('.calc-tab');for(var i=0;i<bs.length;i++)bs[i].classList.toggle('active',Number(bs[i].getAttribute('data-fn'))===active)}
+  function setStatus(message){$('#calcSummary').innerHTML='<div class="loading-note">'+message+'</div>'}
+  function caseResult(no){
+    var p=allPerms(active)[no-1],groups=[p.slice(0,3),p.slice(3,5),p.slice(5,7)],traces=groups.map(groupTrace),audit=auditCache[active],sig=traces.map(function(t){return String(t.state)}).join(',');
+    $('#calcSummary').innerHTML='<div class="case-head"><strong>XS '+String(no).padStart(4,'0')+'</strong> — '+groups.map(function(g){return g.join(',')}).join(' ; ')+'<div style="margin-top:6px">Kết quả: <span class="state-pill">('+sig+')</span>'+(audit?'<span class="muted" style="margin-left:8px">'+(audit.states[no-1]===sig?'đã khớp audit':'')+'</span>':'')+'</div></div>';
+    $('#calcDetail').innerHTML='<div class="branch-grid">'+traces.map(function(t,i){return '<div class="branch-card"><h4>Ô '+(i+1)+' → <span class="state-pill">'+t.state+'</span></h4><div class="trace">'+esc(t.lines.join('\n'))+'</div></div>'}).join('')+'</div>';
+    currentCase=no;$('#caseNo').value=no;renderRows($('#caseSearch').value);
+  }
+  function renderRows(q){
+    q=q||'';var tbody=$('#caseRows');tbody.innerHTML='';var perms=allPerms(active),audit=auditCache[active],query=q.trim().toLowerCase(),shown=0,first=null,last=null;
+    for(var i=0;i<perms.length && shown<80;i++){
+      var p=perms[i],g=[p.slice(0,3),p.slice(3,5),p.slice(5,7)],label=(i+1)+': '+g[0].join(',')+' ; '+g[1].join(',')+' ; '+g[2].join(',');
+      if(query && label.toLowerCase().indexOf(query)===-1)continue;
+      if(first===null)first=i+1;last=i+1;shown++;
+      var sig=audit?audit.states[i]:'—',tr=document.createElement('tr');
+      if(i+1===currentCase)tr.className='active-row';
+      tr.innerHTML='<td>'+String(i+1)+'</td><td>'+g[0].join(',')+'</td><td>'+g[1].join(',')+'</td><td>'+g[2].join(',')+'</td><td>'+sig+'</td><td><button type="button" data-case="'+(i+1)+'">Mở</button></td>';
+      tbody.appendChild(tr);
+    }
+    $('#caseRange').textContent=query?'hiển thị '+shown+' kết quả khớp (tối đa 80)':(first||0)+'–'+(last||0)+' / 5.040 hiển thị';
+  }
+  function auditFn(fn,done){
+    if(auditCache[fn]){done(auditCache[fn]);return}
+    var perms=allPerms(fn),states=new Array(perms.length),hist={},idx=0,intCells=0,finiteCells=0,repeatingCells=0,bad=[],t0=new Date().getTime();
+    $('#auditProgress').hidden=false;
+    function chunk(){
+      var end=Math.min(idx+96,perms.length);
+      for(;idx<end;idx++){
+        var res=evalSummary(perms[idx]),sig=res.map(String).join(','),p=perms[idx],groups=[p.slice(0,3),p.slice(3,5),p.slice(5,7)];
+        states[idx]=sig;hist[sig]=(hist[sig]||0)+1;if(sig!=='1,1,1'&&bad.length<20)bad.push({i:idx+1,p:p,sig:sig});
+        for(var gi=0;gi<groups.length;gi++){
+          var g=groups[gi],cur=rat(Number(g[0]));
+          for(var j=1;j<g.length;j++){var nxt=rat(Number(g[j]));cur=cmp(nxt,cur)<=0?divq(cur,nxt):mul(cur,nxt)}
+          var kind=finalize(cur).kind;if(kind==='integer')intCells++;else if(kind==='finite')finiteCells++;else repeatingCells++;
+        }
+      }
+      var pct=Math.round(idx/perms.length*100);$('#auditLabel').textContent='Hàm '+fn+': '+idx.toLocaleString('vi-VN')+' / '+perms.length.toLocaleString('vi-VN')+' XS';$('#auditPct').textContent=pct+'%';$('#auditBar').style.width=pct+'%';
+      if(idx<perms.length)setTimeout(chunk,0);
+      else{var audit={fn:fn,total:perms.length,allFinal:!bad.length,states:states,hist:hist,bad:bad,integers:intCells,finite:finiteCells,repeating:repeatingCells,ms:new Date().getTime()-t0};auditCache[fn]=audit;done(audit)}
+    }
+    chunk();
+  }
+  function showAudit(a){
+    $('#auditProgress').hidden=true;var hist=[];for(var k in a.hist)if(Object.prototype.hasOwnProperty.call(a.hist,k))hist.push(k+' × '+Number(a.hist[k]).toLocaleString('vi-VN'));
+    $('#calcSummary').innerHTML='<div class="summary-grid"><div class="summary-card"><span>Tổng XS</span><strong>'+a.total.toLocaleString('vi-VN')+'</strong></div><div class="summary-card"><span>Đều về (1,1,1)</span><strong>'+(a.allFinal?'Có':'Không')+'</strong></div><div class="summary-card"><span>Ô số nguyên</span><strong>'+a.integers.toLocaleString('vi-VN')+'</strong></div><div class="summary-card"><span>Ô hữu hạn</span><strong>'+a.finite.toLocaleString('vi-VN')+'</strong></div><div class="summary-card"><span>Ô tuần hoàn</span><strong>'+a.repeating.toLocaleString('vi-VN')+'</strong></div><div class="summary-card"><span>Thời gian audit</span><strong>'+a.ms.toFixed(1)+' ms</strong></div></div><div class="loading-note" style="margin-top:10px"><b>Phân bố trạng thái:</b> '+esc(hist.join(' · '))+'</div>';
+    $('#calcDetail').innerHTML='<div class="branch-card"><h4>'+(a.allFinal?'✅':'⚠️')+' Audit Hàm '+a.fn+'</h4><div class="trace">'+(a.bad.length?esc(JSON.stringify(a.bad,null,2)):'Không có XS nào lệch khỏi (1,1,1) theo bộ quy tắc đang mã hóa.')+'</div></div>';
+    renderRows($('#caseSearch').value);
+  }
+  function switchFn(fn){active=fn;currentCase=1;setTabs();updateInfo();setStatus('Đang nạp bộ XS…');renderRows('');caseResult(1)}
+  function bindCalculatorEvents(){
+    var tabs=document.querySelectorAll('.calc-tab');
+    for(var i=0;i<tabs.length;i++)tabs[i].onclick=function(){switchFn(Number(this.getAttribute('data-fn')))};
+    $('#showCaseBtn').onclick=function(){caseResult(Math.max(1,Math.min(5040,Number($('#caseNo').value)||1)))};
+    $('#prevCaseBtn').onclick=function(){if(currentCase>1)caseResult(currentCase-1)};
+    $('#nextCaseBtn').onclick=function(){if(currentCase<5040)caseResult(currentCase+1)};
+    $('#caseNo').onkeydown=function(e){e=e||window.event;if(e.key==='Enter'||e.keyCode===13)$('#showCaseBtn').click()};
+    $('#caseSearch').oninput=function(){renderRows(this.value)};
+    $('#caseRows').onclick=function(e){e=e||window.event;var t=e.target||e.srcElement;while(t&&t!==this&&(!t.getAttribute||!t.getAttribute('data-case')))t=t.parentNode;if(t&&t.getAttribute){var n=t.getAttribute('data-case');if(n)caseResult(Number(n))}};
+    $('#auditBtn').onclick=function(){
+      try{auditFn(active,showAudit)}catch(err){$('#auditProgress').hidden=true;$('#calcDetail').innerHTML='<div class="branch-card"><h4>Audit error</h4><div class="trace">'+esc(err.stack||err.message||String(err))+'</div></div>'}
+    };
+  }
+  try{
+    bindCalculatorEvents();updateInfo();setTabs();renderRows('');caseResult(1);
+  }catch(initErr){
+    var box=document.getElementById('calcSummary');
+    if(box)box.innerHTML='<div class="loading-note"><b>Máy tính chưa khởi động.</b><br>'+esc(initErr.message||String(initErr))+'</div>';
+  }
+})();
+
+</script>
+</body>
+</html>
