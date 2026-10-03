@@ -7,12 +7,12 @@
   "theme_color": "#0b1020",
   "icons": [
     {
-      "src": "/otako-icon-192.png",
+      "src": "/otako-icon-192-tight.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/otako-icon-512.png",
+      "src": "/otako-icon-512-tight.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
