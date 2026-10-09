@@ -1,0 +1,38 @@
+O-TA-KO SEO INSTALL CHECKLIST
+=============================
+
+Important: These files are prepared but have NOT been deployed to Firebase Hosting.
+
+1) Update index.html
+   - Replace the old generic title with the title in seo-head-snippet.html.
+   - Add the rest of that snippet inside <head>.
+   - Do not leave two <title> tags or two canonical tags.
+   - Optional: replace the current overview paragraph with visible-intro.html.
+
+2) Add these files to the actual Firebase Hosting public directory:
+   - robots.txt
+   - sitemap.xml
+   Their public URLs should become:
+   https://o-ta-ko-web.web.app/robots.txt
+   https://o-ta-ko-web.web.app/sitemap.xml
+
+3) Update README.md in the GitHub repository so the project description and the official portal link are easy to find.
+
+4) Deploy the updated website to Firebase Hosting.
+
+5) Google Search Console
+   - Add/verify the URL-prefix property https://o-ta-ko-web.web.app/
+   - Use URL Inspection for https://o-ta-ko-web.web.app/
+   - Run the live test, fix any actual crawl/indexing issue it reports, then request indexing.
+   - Submit https://o-ta-ko-web.web.app/sitemap.xml in the Sitemaps report.
+
+6) Verify after deployment:
+   - Open /robots.txt and /sitemap.xml in a browser.
+   - In Search Console, review Page indexing and the selected canonical URL.
+   - Recheck the exact site query: site:o-ta-ko-web.web.app
+
+Notes:
+- A sitemap and indexing request help discovery; neither guarantees inclusion or a ranking.
+- Search updates may take days or weeks.
+- Metadata helps explain the page, but the long-term priority is unique, readable content and trustworthy links pointing to the canonical site.
+- Keep the experimental / not-peer-reviewed statement until that status genuinely changes.

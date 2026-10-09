@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://o-ta-ko-web.web.app/sitemap.xml
