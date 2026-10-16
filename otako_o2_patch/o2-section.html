@@ -1,0 +1,64 @@
+<!-- O-Ta-Ko O2 exact occupancy section: insert inside #formulas, immediately after the section heading -->
+<div class="panel o2-occupancy" id="o2-occupancy">
+  <div class="section-head">
+    <div>
+      <span class="badge">BỔ SUNG • CÔNG THỨC Ô 2</span>
+      <h3>Độ chiếm O-Ta của Ô 2 trong lưới 3×3</h3>
+      <p class="o2-lead">Ô 2 là ô giữa của hàng trên cùng. Các công thức áp dụng cho hình tròn O-Ta hoàn hảo, tâm trùng tâm lưới 3×3 và đường kính D = 3s.</p>
+    </div>
+    <span class="status-chip">Biểu thức chính xác</span>
+  </div>
+  <div class="o2-condition"><strong>Điều kiện kích hoạt:</strong> hình tròn hoàn hảo · lưới 3×3 gồm chín ô vuông bằng nhau · tâm hình tròn ở tâm lưới · Ô 2 ở giữa hàng trên · D = 3s.</div>
+  <div class="o2-formula-grid">
+    <div class="o2-formula-card">
+      <h4>1. Hệ số Ô 2 — biểu thức chính xác</h4>
+      <div class="o2-equation">K<sub>2</sub> = √2/2 + (9/4)·arcsin(1/3) − 1/2</div>
+      <p class="o2-small">arcsin được tính theo radian trong biểu thức toán học.</p>
+    </div>
+    <div class="o2-formula-card">
+      <h4>2. Giá trị số của hệ số</h4>
+      <div class="o2-equation">K<sub>2</sub> ≈ 0,971739827458321883</div>
+      <div class="o2-equation">T<sub>2</sub> ≈ 97,1739827458322%</div>
+      <p class="o2-small">Dấu ≈ biểu thị giá trị thập phân hiển thị đã làm tròn; biểu thức K₂ ở thẻ 1 là dạng chính xác.</p>
+    </div>
+    <div class="o2-formula-card">
+      <h4>3. Kích thước và diện tích Ô 2</h4>
+      <div class="o2-equation">s = C/(3π)</div>
+      <div class="o2-equation">A<sub>2</sub> = s² = C²/(9π²)</div>
+      <div class="o2-equation">S<sub>2</sub> = K<sub>2</sub>·A<sub>2</sub></div>
+    </div>
+    <div class="o2-formula-card">
+      <h4>4. Định nghĩa độ chiếm</h4>
+      <div class="o2-equation">T<sub>2</sub> = S<sub>2</sub>/A<sub>2</sub> = K<sub>2</sub></div>
+      <p class="o2-small">Đổi chu vi chỉ làm đổi kích thước và diện tích tuyệt đối; T₂ không đổi khi mô hình vẫn thỏa các điều kiện chuẩn.</p>
+    </div>
+  </div>
+  <div class="o2-calculator" aria-labelledby="o2CalcTitle">
+    <h4 id="o2CalcTitle" style="margin:0;color:#fff">Máy tính độ chiếm Ô 2</h4>
+    <p class="o2-small">Nhập chu vi của hình tròn. Các kết quả chiều dài và diện tích dùng cùng đơn vị mà bạn chọn.</p>
+    <div class="o2-input-row">
+      <div class="o2-input-field">
+        <label for="o2Circumference">Chu vi C</label>
+        <input id="o2Circumference" type="number" min="0" step="any" value="123" inputmode="decimal">
+      </div>
+      <div class="o2-input-field">
+        <label for="o2Unit">Đơn vị</label>
+        <select id="o2Unit">
+          <option value="km">km</option>
+          <option value="m" selected>m</option>
+          <option value="cm">cm</option>
+          <option value="mm">mm</option>
+        </select>
+      </div>
+    </div>
+    <div id="o2CalcWarning" class="o2-warning" role="alert"></div>
+    <div class="o2-results" aria-live="polite">
+      <div class="o2-result"><span>Bán kính R</span><strong id="o2RadiusResult">—</strong></div>
+      <div class="o2-result"><span>Đường kính D</span><strong id="o2DiameterResult">—</strong></div>
+      <div class="o2-result"><span>Cạnh ô s</span><strong id="o2SideResult">—</strong></div>
+      <div class="o2-result"><span>Diện tích toàn bộ Ô 2 (A₂)</span><strong id="o2CellAreaResult">—</strong></div>
+      <div class="o2-result"><span>Diện tích O-Ta trong Ô 2 (S₂)</span><strong id="o2PartialAreaResult">—</strong></div>
+      <div class="o2-result highlight"><span>Độ chiếm Ô 2 (T₂)</span><strong id="o2OccupancyResult">97,1739827458322%</strong></div>
+    </div>
+  </div>
+</div>
