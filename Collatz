@@ -9,3 +9,34 @@ Explanation of Notation and the A/B Model
 - A/B Groups: The last digit is used to determine which category a positive integer n belongs to. If the last digit is in set A, n is classified into the group of numbers ending in an odd digit; if it is in set B, n is classified into the group of numbers ending in an even digit.
 - Procedure: The last digit is used solely to select the appropriate transformation. The transformation is applied to the entire integer n—the number is not replaced by its last digit alone. Once a new number is obtained, its last digit is identified to classify it for the next step.
 - Purpose of the Classification: Sets A and B encompass all possible digits that can occupy the final position of a positive integer. Consequently, this model categorizes positive integers based on their last digit and determines subsequent transformation steps according to the Collatz rules.
+A/B Model for Integers
+
+A: {1, 3, 5, 7, 9} / B: {0, 2, 4, 6, 8}
+
+Group A consists of the set of odd digits that can appear at the beginning or end of any positive integer.
+
+Group B consists of the set of even digits that can appear at the beginning or end of any positive integer. r: The last digit of any given positive integer.
+
+n: A positive integer, representing the entire number—not just its first or last digit.
+
+Mod: The set of digits {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}.
+
+A/B Groups: Every positive integer necessarily belongs to one of these two groups—Group A or Group B—based on its last digit. If the last digit is even, the number belongs to Group B; if it is odd, the number belongs to Group A.
+
+Consider the set of all positive integers from 1 to infinity. Every positive integer must belong to either Group A or Group B. Once a number is identified as a positive integer, it is certain to converge to 1. This is because, when the parity rules of the Collatz conjecture are applied to the digits 0 through 9—all of which have been shown to converge to 1—it follows that every other positive integer must also converge to 1.
+
+(This article does not aim to prove the Collatz conjecture false; rather, it suggests that the Collatz problem should not be approached by analyzing each number individually, as doing so only makes the problem more difficult.)
+
+Author: Nguyễn Tuấn Kiệt
+Location: Vietnam
+Date/Time of publication: 20:00, October 21, 2026
+Link to illustration: https://github.com/Protoveres1secon/Otako-Theory-Research/blob/main/1792506430067_2931187549464673426_2931187549464673426_671297544d2391154c5dad0d283f8cc8.jpg
+Link to handwritten documentation on GitHub: https://github.com/Protoveres1secon/Otako-Theory-Research/blob/main/Collatz
+Repository: GitHub; uploaded at 21:28:13, October 20, 2026 (Vietnam Standard Time). Note: Regarding the numbers 0 and 1 in the context of the Collatz conjecture—the number 1 is not considered an absolute, "perfect" endpoint, while 0 is excluded because this discussion focuses on the representation of integers (e.g., the number 100). This analysis considers all positive integers $n$, rather than focusing solely on the final digit of any given positive integer. The final digit (or the leading digit) serves only to determine whether a number belongs to group A or group B; this, in turn, dictates which specific Collatz operation should be applied. The objective is to demonstrate that every positive integer—whether in group A or group B—eventually converges to 1; this is established by accounting for all ten possible digits (from 0 to 9). Starting from 10, the final digit follows a repeating sequence: 0 → ... → 9 → 0 → ... → 9. This means that for any integer from 10 to infinity, the final digit will always fall within this repeating pattern. (Values ​​below 10 are handled by a separate function.) For instance, consider 5103: the final digit is odd, and the number itself is odd. Since the odd digit 3 maps to 1—and the same applies to 5—all such integers eventually lead to 1.
+Essentially, these digits act as "representatives"; every number has a final digit, and each of these representative digits has been shown to map back to 1.
+As the sequence progresses, the result remains within this system of representative values—much like how choosing any arbitrary number to perform a calculation will always lead back to one of these representatives.
+This is highly reliable, which is why I previously developed what I call a "confinement function."
+The function is defined as O: {1 → infinity}.
+Here, "O" denotes the confinement function.
+It signifies that all integers from 1 to infinity are "locked" within a system governed by a modulo 10 (n ≡ 10 mod) structure.
+An official post appeared in the Protokakusa group at 20:00:37 (Vietnam time), presenting an argument to challenge the Collatz conjecture.
